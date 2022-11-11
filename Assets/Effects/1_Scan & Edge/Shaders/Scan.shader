@@ -57,8 +57,9 @@ Shader "Unlit/Scan"
                 o.view_WorldDir = normalize(_WorldSpaceCameraPos.xyz - o.pos_World);
                 o.normal_WorldDir = normalize(UnityObjectToWorldNormal(v.normal));
                 /*齐次坐标概念，4维向量最后一位：1表示点，0表示向量。注：下面加的flaot4(0,0,0,1),
-                其中的 0 改成别的任意值都可以，因为只是保证相对于某个点的大小是不会随物体位置变化而变化的。
-                相对某个点位置不变的意思是：当物体在移动或旋转的时候，与他相对的也同样做 M 矩阵变换，
+                其中的 0 改成别的任意值都可以，可以认为是模型上的某一点。
+                因为只是保证相对于某个点的大小是不会随物体位置变化而变化的。
+                相对某个点位置不变的意思是：当物体在移动或旋转的时候，模型上的某一点(也就是上面的float4(0,0,0,1))也同样做 M 矩阵变换，
                 两者相减的结果就是，该物体是静止的，计算出的 UV 不会随物体的移动而改变。*/
                 o.pos_ZeroToWorld = mul(unity_ObjectToWorld, float4(0, 0, 0, 1));
                 o.uv = TRANSFORM_TEX(v.texcoord, _MainTex);
