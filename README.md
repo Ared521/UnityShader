@@ -22,5 +22,5 @@ unity版本：2020.3.19
 ![img](https://github.com/Ared521/UnityShader/blob/main/Assets/Resources/README_gif/StencilTest_2.gif)
 
 ## IBL SH
-技术文档：[Stencil Test](https://www.yuque.com/u27384247/pkfic1/ruk770)
+技术文档：[IBL、SH](https://www.yuque.com/u27384247/pkfic1/ruk770)
 ![image](https://user-images.githubusercontent.com/104584816/201355414-ce565b4b-5ee5-4de8-82b0-d1a5d5a1ecc9.png)
