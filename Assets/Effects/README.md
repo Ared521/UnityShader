@@ -9,11 +9,11 @@
 ---
 
 ## 边缘光、流光
-技术文档：[边缘光、流光](https://www.yuque.com/u27384247/pkfic1/au7hal)
+实现原理：[边缘光、流光](https://www.yuque.com/u27384247/pkfic1/au7hal)
 ![img](https://github.com/Ared521/UnityShader/blob/main/Assets/Resources/README_gif/Edge%26Scan.gif)
 
 ## Stencil Test
-技术文档：[Stencil Test](https://www.yuque.com/u27384247/pkfic1/yfsabt)
+实现原理：[Stencil Test](https://www.yuque.com/u27384247/pkfic1/yfsabt)
 
 深度测试示例：
 ![img](https://github.com/Ared521/UnityShader/blob/main/Assets/Resources/README_gif/StencilTest_1.gif)
@@ -21,6 +21,6 @@
 原神里有一个场景是人物穿过一面纸窗户，能够看到人的影子，这里实现方式用一个球代替人物模型，球正常渲染，球的子物体设置一个跟球大小一样的物体，shader设置为模板测试代码，效果如下：
 ![img](https://github.com/Ared521/UnityShader/blob/main/Assets/Resources/README_gif/StencilTest_2.gif)
 
-## IBL, SH
-技术文档：[IBL、SH](https://www.yuque.com/u27384247/pkfic1/ruk770)
+## IBL、SH
+实现原理：[IBL、SH](https://www.yuque.com/u27384247/pkfic1/ruk770)
 ![image](https://user-images.githubusercontent.com/104584816/201355414-ce565b4b-5ee5-4de8-82b0-d1a5d5a1ecc9.png)
