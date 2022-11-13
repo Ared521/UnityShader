@@ -1,6 +1,8 @@
 # Learn Unity Shader
 记录学习Kerry Unity Shader课程和《Unity Shader入门精要》
 
+>## 《Unity Shader入门精要》：[读书笔记](https://www.yuque.com/u27384247/pkfic1/au7hal)
+
 unity版本：2020.3.19
 
 ### 注：
