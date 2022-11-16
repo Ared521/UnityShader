@@ -1,4 +1,4 @@
-﻿Shader "RefletionProbe"
+﻿Shader "Effects_Unlit/4_RefletionProbe"
 {
 	Properties
 	{

@@ -1,4 +1,4 @@
-﻿Shader "SH"
+﻿Shader "Effects_Unlit/4_SH"
 {
 	Properties
 	{

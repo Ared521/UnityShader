@@ -1,4 +1,4 @@
-Shader "Unlit/IBL_CubeMap"
+Shader "Effects_Unlit/4_IBL_CubeMap"
 {
     Properties
     {

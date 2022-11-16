@@ -1,4 +1,4 @@
-Shader "Unlit/Scan"
+Shader "Effects_Unlit/1_Scan"
 {
     Properties
     {

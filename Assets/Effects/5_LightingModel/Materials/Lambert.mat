@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Lambert
-  m_Shader: {fileID: 4800000, guid: a727c8e31a1d96b4ba92350383fa8411, type: 3}
+  m_Shader: {fileID: 4800000, guid: 3e48a92876d8d154d8fc33add9badbb3, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0

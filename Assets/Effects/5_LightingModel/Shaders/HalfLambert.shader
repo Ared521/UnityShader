@@ -1,4 +1,4 @@
-Shader "Unlit/HalfLambert"
+Shader "Effects_Unlit/5_HalfLambert"
 {
     Properties
     {

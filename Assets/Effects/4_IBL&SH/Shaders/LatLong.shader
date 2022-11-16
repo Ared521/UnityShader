@@ -1,4 +1,4 @@
-﻿Shader "Unlit/LatLong"
+﻿Shader "Effects_Unlit/4_LatLong"
 {
 	Properties
 	{

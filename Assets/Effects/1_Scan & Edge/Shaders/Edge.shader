@@ -1,4 +1,4 @@
-Shader "Unlit/Edge"
+Shader "Effects_Unlit/1_Edge"
 {
     Properties
     {

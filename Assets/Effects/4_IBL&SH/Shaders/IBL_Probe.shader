@@ -1,4 +1,4 @@
-﻿Shader "IBLProbe"
+﻿Shader "Effects_Unlit/4_IBLProbe"
 {
 	Properties
 	{
