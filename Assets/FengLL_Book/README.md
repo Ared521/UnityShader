@@ -140,6 +140,9 @@ Shader中包含了这样一个通用的Pass。因此，为每个Unity Shader正�
 * Shader 中，如 `POSITION` 将会告诉 Unity，把模型的顶点坐标赋给 `:` 左边的变量。`SV_POSITION` 则是将顶点着色器输出的裁剪空间下的顶点坐标赋给 `:` 左边的变量。如果没有这些语义来限定输入输出参数的话，渲染器就完全不知道用户的输入输出是什么。对于 fragment shader 来说，`SV_Target` 也是HLSL中的一个系统语义，它等同于告诉渲染器，把片元着色器的输出颜色存储到一个渲染目标`render target` 中，这里将输出到默认的帧缓存中。
 * `struct a2v` 中的 `float4 texcoord : TEXCOORD0`，其中 `TEXCOORD0` 表示模型的纹理坐标，后面的数字是几，就是第几个。`#pragma target X.0` 的不同，支持的个数也不同。
 * `.cginc`是内置的包含文件，很重要，尤其是`#include UnityCG.cginc`。在 `UnityShaderVariables.cginc`、`Lighting.cginc`、`AutoLight.cginc`等文件中也有 Unity 为我们提供的用于访问时间、光照、雾效和环境光等目的变量。
+<div align=center>
+<img src="https://user-images.githubusercontent.com/104584816/202467639-4b4dfac4-d6c7-421b-b577-1d5d7a1bd052.png" width="800" height="2000">
+</div>
 * 语义实际上就是一个赋给 Shader 输入和输出的字符串，这个字符串表达了这个参数的含义。通俗地讲，这些语义可以让 Shader 知道从哪里读取数据，并把数据输出到哪里，它们在 Cg/HLSL 的 Shader 流水线中是不可或缺的。需要注意的是，Unity 并没有支持所有的语义。
 * 为了让我们的 Shader 有更好的跨平台性，对于这些有特殊含义的变量我们最好使用以 SV 开头的语义进行修饰，如 `SV_POSITION`、`SV_Target`
 * ，一个语义可以使用的寄存器只能处理4个浮点值`float4`。因此，如果我们想要定义矩阵类型，如`float3×4`、`float4×4`等变量就需要使用更多的空间。一种方法是，把这些变量拆分成多个变量，例如对于`float4×4`的矩阵类型，我们可以拆分成4个`float4`类型的变量，每个变量存储了矩阵中的一行数据。之后关于 切线空间 `TBN` 矩阵会用到。
@@ -159,6 +162,9 @@ Shader中包含了这样一个通用的Pass。因此，为每个Unity Shader正�
 
 ### 4. Shader Model
 * 不同的 Shader Target、不同的着色器阶段，我们可使用的临时寄存器和指令数目都是不同的。否则会报错：我们在 Shader 中进行了过多的运算，使得需要的临时寄存器数目或指令数目超过了当前可支持的数目。通常，我们可以通过指定更高等级的 Shader Target 来消除这些错误。Shader Model 是由微软提出的一套规范，通俗地理解就是它们决定了 Shader 中各个特性的能力。这些特性和能力体现在 Shader 能使用的运算指令数目、寄存器个数等各个方面。Shader Model 等级越高，Shader 的能力就越大。
+<div align=center>
+<img src="https://user-images.githubusercontent.com/104584816/202466927-30d43e71-5b42-458b-a290-473d51298487.png" width="800" height="400">
+</div>
 
 
 
