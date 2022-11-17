@@ -63,14 +63,31 @@ Shader "ShaderName" {
       }
       SubShader {
           //显卡 A 使用的子着色器
+          [Tags]
+          [RenderSetup]
+          
+          Pass {
+              [Tags]
+              [RenderSetup]
+          }
+          // Other Passes
       }
       SubShader {
           //显卡 B 使用的子着色器
       }
-      Fallback "VertexLit" //当Unity需要加载这个 Unity Shader 时，Unity会扫描所有的 SubShader 语义块，然后选择第一个能够在目标平台上运行的 SubShader 。如果 SubShader 都不支持的话，Unity 就会使用 Fallback 语义指定的 Unity Shader。
+      /*当Unity需要加载这个 Unity Shader 时，Unity会扫描所有的 SubShader 语义块，然后选择第一个能够在目标平台上运行的 SubShader。
+      如果 SubShader 都不支持的话，Unity 就会使用 Fallback 语义指定的 Unity Shader。*/
+      Fallback "VertexLit" 
 }
 ```
 * Properties 语义块的作用仅仅是为了让这些属性可以出现在材质面板中，我们可以通过脚本向Shader中传递属性。
+* SubShader 中定义了一系列Pass 以及可选的状态（[RenderSetup]）和标签 （[Tags]）设置。每个Pass 定义了一次完整的渲染流程，但如果Pass 的数目过多，往往会造成渲染性能的下降。因此，我们应尽量使用最小数目的Pass 。状态和标签同样可以在Pass声明。不同的是，SubShader 中的一些标签设置是特定的。也就是说，这些标签设置和Pass 中使用的标签是不一样的。而对于状态设置来说，其使用的语法是相同的。但是，如果我们在SubShader 进行了这些设置，那么将会用于所有的Pass。
+* 渲染状态可在不同的 Pass 中单独设置。
+<div align=center>
+<img src="https://user-images.githubusercontent.com/104584816/202373000-298785b5-3334-48a2-a206-128446235458.png" width="600" height="400">
+</div>
+* SubShader 的标签（Tags）是一个键值对 （Key/Value Pair），它的键和值都是字符串类型。这些键值对是SubShader 和渲染引擎之间的沟通桥梁。它们用来告诉Unity的渲染引擎：我希望怎样以及何时渲染这个对象。标签结构：
+
 
 
 
