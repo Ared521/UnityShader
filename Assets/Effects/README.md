@@ -1,7 +1,7 @@
 # Unity Shader Effects
 ## 记录学习Kerry Unity Shader课程的效果，新效果也会持续更新 ~ ~ ~
 
-> unity版本：2020.3.19
+> unity版本：2021.3.13
 
 > 实现的效果 demo 都放在 Effects 文件夹，欢迎各位大佬交流指正
 
