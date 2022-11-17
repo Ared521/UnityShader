@@ -54,7 +54,7 @@ $\color{yellow}{就是片元着色器可以访问到导数信息(这个之前做
 
 ---
 ## 第三章 Unity Shader 基础
-### ShaderLab
+### 1. ShaderLab
 * 在 Unity 中，所有的 Unity Shader 都是使用 ShaderLab 来编写的。ShaderLab 是 Unity 提供的编写 Unity Shader 的一种说明性语言，它不是真正意义上的 shader 文件，它里面可以定义一些材质所需要的所有东西，而**不仅仅是着色器代码。** Unity 在背后会根据使用的平台来把下面代码这些结构编译成真正的代码和 shader 文件，开发者只需要和 Unity Shader 打交道即可。
 ``` 
 Shader "ShaderName" {
@@ -67,8 +67,10 @@ Shader "ShaderName" {
           [RenderSetup]
           
           Pass {
+              [Name]
               [Tags]
               [RenderSetup]
+              // Other code
           }
           // Other Passes
       }
@@ -86,8 +88,47 @@ Shader "ShaderName" {
 <div align=center>
 <img src="https://user-images.githubusercontent.com/104584816/202373000-298785b5-3334-48a2-a206-128446235458.png" width="600" height="400">
 </div>
-* SubShader 的标签（Tags）是一个键值对 （Key/Value Pair），它的键和值都是字符串类型。这些键值对是SubShader 和渲染引擎之间的沟通桥梁。它们用来告诉Unity的渲染引擎：我希望怎样以及何时渲染这个对象。标签结构：
+* SubShader 的标签（Tags）是一个键值对 （Key/Value Pair），它的键和值都是字符串类型。这些键值对是SubShader 和渲染引擎之间的沟通桥梁。它们用来告诉Unity的渲染引擎：我希望怎样以及何时渲染这个对象。标签结构如下：
 
+```Tags { "TagName1" = "Value1" "TagName2" = "Value2" } ```
+<div align=center>
+<img src="https://user-images.githubusercontent.com/104584816/202376075-1a554343-0ec1-44bb-badf-5ae887104428.png" width="600" height="800">
+</div>
+<div align=center>
+<img src="https://user-images.githubusercontent.com/104584816/202376205-facdba44-de77-4db2-b429-5087aa31f12e.png" width="600" height="350">
+</div>
+
+### 2. UsePass 和 GrabPass
+* UsePass: 如我们之前提到的一样，可以使用该命令来复用其他 Unity Shader 中的 Pass。需要在 Pass 中声明 Name。如上述代码块。
+ 
+```Name "MyPassName"```
+* ### GrabPass: 该 Pass 负责抓取屏幕并将结果存储在一张纹理中，以用于后续的Pass 处理。
+
+```在其他 shader 中使用 UsePass 语句： UsePass "MyShader/MyPassName"```
+* 事实上，Fallback 还会影响阴影的投射。在渲染阴影纹理时，Unity会在每个Unity Shader中寻找一个阴影投射的Pass。通常情况下，我们不需要自己专门实现一个Pass，这是因为Fallback 使用的内置
+Shader中包含了这样一个通用的Pass。因此，为每个Unity Shader正确设置Fallback 是非常重要的。更多关于Unity中阴影的实现，可以参见 Unity Shader 入门精要 9.4节。
+
+### 3. Surface Shader(表面着色器)
+* 表面着色器其实就是 Unity 对顶点/片元着色器的更高一层的抽象，它存在的价值就是为我们处理了很多光照细节，方便我们使用。Unity 在背后仍然会把表面着色器转换成对应的顶点/片元着色器。
+* CGPROGRAM 和ENDCG 之间的代码是使用Cg/HLSL编写的，也就是说，我们需要把Cg/HLSL语言嵌套在ShaderLab语言中。值得注意的是，这里的Cg/HLSL是Unity经封装后提供的，它的语法和标准的Cg/HLSL语法几乎一样，但还是有细微的不同，例如有些原生的函数和用法Unity并没有提供支持。
+
+### 4. (fix function)固定函数着色器
+<div align=center>
+<img src="https://user-images.githubusercontent.com/104584816/202380965-4e4d85fa-b0ec-4b62-93d9-a86d18bb1057.png" width="800" height="500">
+</div>
+
+### 5. Unity Shader 的选择
+* 低端机器，旧机器用 fix function 固定函数着色器。
+* 如果涉及到复杂的光源光照，用表面着色器，需要注意的是在移动平台的性能。
+* 光照数目少，用顶点/片元着色器，也就是在 Unity 中创建 Unlit Shader。
+* 自定义的渲染效果，用顶点/片元着色器。
+
+### 6. 其他
+* 尽管 Unity Shader 翻译过来就是 Unity 着色器。在Unity里，Unity Shader 实际上指的就是一个 ShaderLab 文件——硬盘上以 .shader 作为文件后缀的一种文件。
+* Unity Shader 除了上述这些优点外，也有一些缺点。由于 Unity Shader 的高度封装性，我们可以编写的Shader类型和语法都被限制了。对于一些类型的 Shader，例如曲面细分着色器（Tessellation Shader）、几何着色器（Geometry Shader）等，Unity 的支持就相对差一些。
+* Cg/HLSL 代码是嵌套在 CGPROGRAM 和 ENDCG 之间的，正如我们之前看到的示例代码一样。由于 Cg 和 DX9 风格的 HLSL 从写法上来说几乎是同一种语言，因此在 Unity 里 Cg 和 HLSL 是等价的。
+* Unity 编辑器会把这些 Cg 片段编译成低级语言，如汇编语言等。通常，Unity 会自动把这些 Cg 片段编译到所有相关平台（这里的平台是指不同的渲染平台，例如 Direct3D 9、Direct3D 11、OpenGL、OpenGL ES等）上。这些编译过程比较复杂，Unity 会使用不同的编译器来把 Cg 转换成对应平台的代码。这样就不会在切换平台时再重新编译，而且如果代码在某些平台上发生错误就可以立刻得到错误信息。
+* 当发布游戏的时候，游戏数据文件中只包含目标平台需要的编译代码，而那些在目标平台上不需要的代码部分就会被移除。例如，当发布到 Mac OS X 平台上时，DirectX 对应的代码部分就会被移除。
 
 
 
