@@ -88,6 +88,7 @@ Shader "ShaderName" {
 <div align=center>
 <img src="https://user-images.githubusercontent.com/104584816/202373000-298785b5-3334-48a2-a206-128446235458.png" width="600" height="400">
 </div>
+
 * SubShader 的标签（Tags）是一个键值对 （Key/Value Pair），它的键和值都是字符串类型。这些键值对是SubShader 和渲染引擎之间的沟通桥梁。它们用来告诉Unity的渲染引擎：我希望怎样以及何时渲染这个对象。标签结构如下：
 
 ```Tags { "TagName1" = "Value1" "TagName2" = "Value2" } ```
@@ -99,12 +100,9 @@ Shader "ShaderName" {
 </div>
 
 ### 2. UsePass 和 GrabPass
-* UsePass: 如我们之前提到的一样，可以使用该命令来复用其他 Unity Shader 中的 Pass。需要在 Pass 中声明 Name。如上述代码块。
- 
-```Name "MyPassName"```
-* ### GrabPass: 该 Pass 负责抓取屏幕并将结果存储在一张纹理中，以用于后续的Pass 处理。
-
-```在其他 shader 中使用 UsePass 语句： UsePass "MyShader/MyPassName"```
+* UsePass: 如我们之前提到的一样，可以使用该命令来复用其他 Unity Shader 中的 Pass。需要注意的是，在被引用的 shader 中需要在 Pass 中声明 Name。如上述代码块: `Name "MyPassName"`
+* GrabPass: 该 Pass 负责抓取屏幕并将结果存储在一张纹理中，以用于后续的Pass 处理。
+* `在其他 shader 中使用 UsePass 语句： UsePass "MyShader/MyPassName"`
 * 事实上，Fallback 还会影响阴影的投射。在渲染阴影纹理时，Unity会在每个Unity Shader中寻找一个阴影投射的Pass。通常情况下，我们不需要自己专门实现一个Pass，这是因为Fallback 使用的内置
 Shader中包含了这样一个通用的Pass。因此，为每个Unity Shader正确设置Fallback 是非常重要的。更多关于Unity中阴影的实现，可以参见 Unity Shader 入门精要 9.4节。
 
@@ -143,6 +141,7 @@ Shader中包含了这样一个通用的Pass。因此，为每个Unity Shader正�
 <div align=center>
 <img src="https://user-images.githubusercontent.com/104584816/202467639-4b4dfac4-d6c7-421b-b577-1d5d7a1bd052.png" width="800" height="2000">
 </div>
+
 * 语义实际上就是一个赋给 Shader 输入和输出的字符串，这个字符串表达了这个参数的含义。通俗地讲，这些语义可以让 Shader 知道从哪里读取数据，并把数据输出到哪里，它们在 Cg/HLSL 的 Shader 流水线中是不可或缺的。需要注意的是，Unity 并没有支持所有的语义。
 * 为了让我们的 Shader 有更好的跨平台性，对于这些有特殊含义的变量我们最好使用以 SV 开头的语义进行修饰，如 `SV_POSITION`、`SV_Target`
 * ，一个语义可以使用的寄存器只能处理4个浮点值`float4`。因此，如果我们想要定义矩阵类型，如`float3×4`、`float4×4`等变量就需要使用更多的空间。一种方法是，把这些变量拆分成多个变量，例如对于`float4×4`的矩阵类型，我们可以拆分成4个`float4`类型的变量，每个变量存储了矩阵中的一行数据。之后关于 切线空间 `TBN` 矩阵会用到。
@@ -156,6 +155,7 @@ Shader中包含了这样一个通用的Pass。因此，为每个Unity Shader正�
 <div align=center>
 <img src="https://user-images.githubusercontent.com/104584816/202459069-8e551cdf-9654-479f-8e41-51589ecd697e.png" width="800" height="1200">
 </div>
+
 * DirectX 9 / 11也不支持在顶点着色器中使用 tex2D 函数。tex2D 是一个对纹理进行采样的函数，我们在后面的章节中将会具体讲到。之所以DirectX 9 / 11不支持顶点阶段中的 tex2D 运算，是因为在顶点着色器阶段 Shader 无法得到 UV 偏导，而 tex2D 函数需要这样的偏导信息（这和纹理采样时使用的数学运算有关）。如果我们的确需要在顶点着色器中访问纹理，需要使用如下代码：
 
 `tex2Dlod(tex, float4(uv, 0, 0));` 而且我们还需要添加 `#pragma target 3.0`，因为 tex2Dlod 是 Shader Model 3.0 中的特性。
