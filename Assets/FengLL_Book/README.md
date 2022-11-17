@@ -153,7 +153,12 @@ Shader中包含了这样一个通用的Pass。因此，为每个Unity Shader正�
 <div align=center>
 <img src="https://user-images.githubusercontent.com/104584816/202459069-8e551cdf-9654-479f-8e41-51589ecd697e.png" width="800" height="1200">
 </div>
-* DirectX 9 / 11也不支持在顶点着色器中使用 tex2D 函数。tex2D 是一个对纹理进行采样的函数，我们在后面的章节中将会具体讲到。之所以DirectX 9 / 11不支持顶点阶段中的 tex2D 运算，是因为在顶点着色器阶段 Shader 无法得到 UV 偏导，而 tex2D 函数需要这样的偏导信息（这和纹理采样时使用的数学运算有关）。如果我们的确需要在顶点着色器中访问纹理，需要使用 tex2Dlod。`tex2Dlod(tex, float4(uv, 0, 0));` 而且我们还需要添加 `#pragma target 3.0`，因为 tex2Dlod 是 Shader Model 3.0 中的特性。
+* DirectX 9 / 11也不支持在顶点着色器中使用 tex2D 函数。tex2D 是一个对纹理进行采样的函数，我们在后面的章节中将会具体讲到。之所以DirectX 9 / 11不支持顶点阶段中的 tex2D 运算，是因为在顶点着色器阶段 Shader 无法得到 UV 偏导，而 tex2D 函数需要这样的偏导信息（这和纹理采样时使用的数学运算有关）。如果我们的确需要在顶点着色器中访问纹理，需要使用如下代码：
+
+`tex2Dlod(tex, float4(uv, 0, 0));` 而且我们还需要添加 `#pragma target 3.0`，因为 tex2Dlod 是 Shader Model 3.0 中的特性。
+
+### 4. Shader Model
+* 不同的 Shader Target、不同的着色器阶段，我们可使用的临时寄存器和指令数目都是不同的。否则会报错：我们在 Shader 中进行了过多的运算，使得需要的临时寄存器数目或指令数目超过了当前可支持的数目。通常，我们可以通过指定更高等级的 Shader Target 来消除这些错误。Shader Model 是由微软提出的一套规范，通俗地理解就是它们决定了Shader中各个特性（feature）的能力（capability）。这些特性和能力体现在 Shader 能使用的运算指令数目、寄存器个数等各个方面。Shader Model 等级越高，Shader 的能力就越大。
 
 
 
