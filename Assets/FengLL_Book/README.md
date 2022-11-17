@@ -136,6 +136,24 @@ Shader中包含了这样一个通用的Pass。因此，为每个Unity Shader正�
 
 ---
 ## 第五章 开始 Unity Shader 学习之旅
+### 1. 语义
+* Shader 中，如 `POSITION` 将会告诉 Unity，把模型的顶点坐标赋给 `:` 左边的变量。`SV_POSITION` 则是将顶点着色器输出的裁剪空间下的顶点坐标赋给 `:` 左边的变量。如果没有这些语义来限定输入输出参数的话，渲染器就完全不知道用户的输入输出是什么。对于 fragment shader 来说，`SV_Target` 也是HLSL中的一个系统语义，它等同于告诉渲染器，把片元着色器的输出颜色存储到一个渲染目标`render target` 中，这里将输出到默认的帧缓存中。
+* `struct a2v` 中的 `float4 texcoord : TEXCOORD0`，其中 `TEXCOORD0` 表示模型的纹理坐标，后面的数字是几，就是第几个。`#pragma target X.0` 的不同，支持的个数也不同。
+* `.cginc`是内置的包含文件，很重要，尤其是`#include UnityCG.cginc`。在 `UnityShaderVariables.cginc`、`Lighting.cginc`、`AutoLight.cginc`等文件中也有 Unity 为我们提供的用于访问时间、光照、雾效和环境光等目的变量。
+* 语义实际上就是一个赋给 Shader 输入和输出的字符串，这个字符串表达了这个参数的含义。通俗地讲，这些语义可以让 Shader 知道从哪里读取数据，并把数据输出到哪里，它们在 Cg/HLSL 的 Shader 流水线中是不可或缺的。需要注意的是，Unity 并没有支持所有的语义。
+* 为了让我们的 Shader 有更好的跨平台性，对于这些有特殊含义的变量我们最好使用以 SV 开头的语义进行修饰，如 `SV_POSITION`、`SV_Target`
+* ，一个语义可以使用的寄存器只能处理4个浮点值`float4`。因此，如果我们想要定义矩阵类型，如`float3×4`、`float4×4`等变量就需要使用更多的空间。一种方法是，把这些变量拆分成多个变量，例如对于`float4×4`的矩阵类型，我们可以拆分成4个`float4`类型的变量，每个变量存储了矩阵中的一行数据。之后关于 切线空间 `TBN` 矩阵会用到。
+
+### 2. 渲染信息
+* Frame Debugger 是使用 **停止渲染** 的方法来查看渲染事件的结果，并不是帧拾取(frame capture)功能。想要获得更多的信息，需要使用别的外部工具，如：**RenderDoc(重要！待开坑= =)。**
+
+### 3. 渲染平台的差异
+* Unity 默认是使用 DX11 渲染 API，不同的渲染平台会有差异，如 DX11 和 OpenGL 的渲染纹理坐标差异。
+* 当我们要使用渲染到纹理技术，把屏幕图像渲染到一张渲染纹理中时，如果不采取任何措施的话，就会出现纹理翻转的情况。幸运的是，Unity 在背后为我们处理了这种翻转问题 —— 当在DirectX平台上使用渲染到纹理技术时，Unity 会为我们翻转屏幕图像纹理，以便在不同平台上达到一致性。
+<div align=center>
+<img src="https://user-images.githubusercontent.com/104584816/202459069-8e551cdf-9654-479f-8e41-51589ecd697e.png" width="800" height="1200">
+</div>
+* DirectX 9 / 11也不支持在顶点着色器中使用 tex2D 函数。tex2D 是一个对纹理进行采样的函数，我们在后面的章节中将会具体讲到。之所以DirectX 9 / 11不支持顶点阶段中的 tex2D 运算，是因为在顶点着色器阶段 Shader 无法得到 UV 偏导，而 tex2D 函数需要这样的偏导信息（这和纹理采样时使用的数学运算有关）。如果我们的确需要在顶点着色器中访问纹理，需要使用 tex2Dlod。`tex2Dlod(tex, float4(uv, 0, 0));` 而且我们还需要添加 `#pragma target 3.0`，因为 tex2Dlod 是 Shader Model 3.0 中的特性。
 
 
 
