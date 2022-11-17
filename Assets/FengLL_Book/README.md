@@ -89,8 +89,7 @@ Shader "ShaderName" {
 <img src="https://user-images.githubusercontent.com/104584816/202373000-298785b5-3334-48a2-a206-128446235458.png" width="600" height="400">
 </div>
 
-* SubShader 的标签（Tags）是一个键值对 （Key/Value Pair），它的键和值都是字符串类型。这些键值对是SubShader 和渲染引擎之间的沟通桥梁。它们用来告诉Unity的渲染引擎：我希望怎样以及何时渲染这个对象。标签结构如下：
-
+* SubShader 的标签(Tags)是一个键值对(Key/Value Pair)，它的键和值都是字符串类型。这些键值对是SubShader 和渲染引擎之间的沟通桥梁。它们用来告诉 Unity 的渲染引擎：我希望怎样以及何时渲染这个对象。代码：
 ```Tags { "TagName1" = "Value1" "TagName2" = "Value2" } ```
 <div align=center>
 <img src="https://user-images.githubusercontent.com/104584816/202376075-1a554343-0ec1-44bb-badf-5ae887104428.png" width="600" height="800">
@@ -136,7 +135,7 @@ Shader中包含了这样一个通用的Pass。因此，为每个Unity Shader正�
 ## 第五章 开始 Unity Shader 学习之旅
 ### 1. 语义
 * Shader 中，如 `POSITION` 将会告诉 Unity，把模型的顶点坐标赋给 `:` 左边的变量。`SV_POSITION` 则是将顶点着色器输出的裁剪空间下的顶点坐标赋给 `:` 左边的变量。如果没有这些语义来限定输入输出参数的话，渲染器就完全不知道用户的输入输出是什么。对于 fragment shader 来说，`SV_Target` 也是HLSL中的一个系统语义，它等同于告诉渲染器，把片元着色器的输出颜色存储到一个渲染目标`render target` 中，这里将输出到默认的帧缓存中。
-* `struct a2v` 中的 `float4 texcoord : TEXCOORD0`，其中 `TEXCOORD0` 表示模型的纹理坐标，后面的数字是几，就是第几个。`#pragma target X.0` 的不同，支持的个数也不同。
+* `struct a2v` 中的 `float4 texcoord : TEXCOORD0`，`TEXCOORD0` 表示模型的纹理坐标，后面的数字是几，就是第几个。`#pragma target X.0` 的不同，支持的个数也不同。
 * `.cginc`是内置的包含文件，很重要，尤其是`#include UnityCG.cginc`。在 `UnityShaderVariables.cginc`、`Lighting.cginc`、`AutoLight.cginc`等文件中也有 Unity 为我们提供的用于访问时间、光照、雾效和环境光等目的变量。
 <div align=center>
 <img src="https://user-images.githubusercontent.com/104584816/202467639-4b4dfac4-d6c7-421b-b577-1d5d7a1bd052.png" width="800" height="2000">
@@ -156,9 +155,7 @@ Shader中包含了这样一个通用的Pass。因此，为每个Unity Shader正�
 <img src="https://user-images.githubusercontent.com/104584816/202459069-8e551cdf-9654-479f-8e41-51589ecd697e.png" width="800" height="1200">
 </div>
 
-* DirectX 9 / 11也不支持在顶点着色器中使用 tex2D 函数。tex2D 是一个对纹理进行采样的函数，我们在后面的章节中将会具体讲到。之所以DirectX 9 / 11不支持顶点阶段中的 tex2D 运算，是因为在顶点着色器阶段 Shader 无法得到 UV 偏导，而 tex2D 函数需要这样的偏导信息（这和纹理采样时使用的数学运算有关）。如果我们的确需要在顶点着色器中访问纹理，需要使用如下代码：
-
-`tex2Dlod(tex, float4(uv, 0, 0));` 而且我们还需要添加 `#pragma target 3.0`，因为 tex2Dlod 是 Shader Model 3.0 中的特性。
+* DirectX 9 / 11也不支持在顶点着色器中使用 tex2D 函数。tex2D 是一个对纹理进行采样的函数，我们在后面的章节中将会具体讲到。之所以DirectX 9 / 11不支持顶点阶段中的 tex2D 运算，是因为在顶点着色器阶段 Shader 无法得到 UV 偏导，而 tex2D 函数需要这样的偏导信息（这和纹理采样时使用的数学运算有关）。如果我们的确需要在顶点着色器中访问纹理，代码：`tex2Dlod(tex, float4(uv, 0, 0));` 而且我们还需要添加 `#pragma target 3.0`，因为 tex2Dlod 是 Shader Model 3.0 中的特性。
 
 ### 4. Shader Model
 * 不同的 Shader Target、不同的着色器阶段，我们可使用的临时寄存器和指令数目都是不同的。否则会报错：我们在 Shader 中进行了过多的运算，使得需要的临时寄存器数目或指令数目超过了当前可支持的数目。通常，我们可以通过指定更高等级的 Shader Target 来消除这些错误。Shader Model 是由微软提出的一套规范，通俗地理解就是它们决定了 Shader 中各个特性的能力。这些特性和能力体现在 Shader 能使用的运算指令数目、寄存器个数等各个方面。Shader Model 等级越高，Shader 的能力就越大。
