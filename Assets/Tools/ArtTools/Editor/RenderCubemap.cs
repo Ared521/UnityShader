@@ -175,7 +175,7 @@ public class RenderCubemap : EditorWindow {
                 File.WriteAllBytes(path, bytes);
                 AssetDatabase.ImportAsset(path);
                 TextureImporter importer = AssetImporter.GetAtPath(path) as TextureImporter;
-                importer.textureType = TextureImporterType.Cubemap;
+                importer.textureShape = TextureImporterShape.TextureCube;
                 importer.generateCubemap = TextureImporterGenerateCubemap.AutoCubemap;
                 importer.maxTextureSize = _selectedSize;
                 AssetDatabase.ImportAsset(path, ImportAssetOptions.ForceUpdate);
