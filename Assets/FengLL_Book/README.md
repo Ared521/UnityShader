@@ -165,7 +165,7 @@ Shader中包含了这样一个通用的Pass。因此，为每个Unity Shader正�
 
 ---
 ## 第六章 Unity 中的基础光照
-> ### 本章以代码为主，参考本仓库 Effects Demo: [Effects](https://github.com/Ared521/UnityShader/blob/main/Assets/Effects/5_LightingModel/README.md)
+> ### 本章以代码为主，参考本仓库 Effects Demo: [Lighting Effects](https://github.com/Ared521/UnityShader/blob/main/Assets/Effects/5_LightingModel/README.md)
 
 
 
