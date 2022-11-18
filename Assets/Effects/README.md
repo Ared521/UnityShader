@@ -5,11 +5,12 @@
 
 > 实现的效果 demo 都放在 Effects 文件夹，欢迎各位大佬交流指正
 
+> 点击效果名称，查看效果 demo 实现详情。 
+
 > 暂时还不会做模型和贴图，示例中的模型来自别的课程和工程中= =
 ---
 
-## Edge、Scan(边缘光、流光)
-实现原理：[边缘光、流光](https://www.yuque.com/u27384247/pkfic1/au7hal)
+## [Edge、Scan(边缘光、流光)](https://github.com/Ared521/UnityShader/tree/main/Assets/Effects/1_Scan%20&%20Edge)
 ![img](https://github.com/Ared521/UnityShader/blob/main/Assets/Resources/README_gif/Edge%26Scan.gif)
 
 ## Stencil Test(模板测试)
