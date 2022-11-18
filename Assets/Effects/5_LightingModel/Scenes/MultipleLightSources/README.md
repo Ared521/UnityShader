@@ -35,7 +35,32 @@
 ---
 ## 2. 光源类型
 * 平行光的位置跟顶点位置无关，对于任何顶点，平行光位置都不影响光照结果(旋转的时候，平行光方向改变，会影响光照结果)。
-* 平行光、点光源、聚光灯的方向属性，都是通过光源的位置减去顶点的位置来得到该顶点指向光源方向的向量。需要注意的是，对于点光源和聚光灯，有光照衰减值，通常可以又一个函数定义。
+* 平行光、点光源、聚光灯的方向属性，都是通过光源的位置减去顶点的位置来得到该顶点指向光源方向的向量。需要注意的是，对于点光源和聚光灯，有光照衰减值，通常可以由一个函数定义。
+```
+// 计算不同光源方向，平行光跟物体的顶点位置无关。
+                #ifdef USING_DIRECTIONAL_LIGHT
+                    fixed3 light_WorldDir = normalize(_WorldSpaceLightPos0.xyz);
+                    fixed atten = 1.0;
+                #else
+                    fixed3 light_WorldDir = normalize(_WorldSpaceLightPos0.xyz - i.pos_World);
+                    #if defined (POINT)
+                        //unity_WorldToLight 在 AutoLight.cginc 文件中的特定宏下被定义，可以用于把点从世界空间变换到该光源的局部空间下
+                        float3 lightCoord = mul(unity_WorldToLight, float4(i.pos_World, 1)).xyz;
+                        /* UNITY_ATTEN_CHANNEL 是衰减值所在的纹理通道，可以在内置的 HLSLSupport.cginc 文件中查看，
+                        一般PC和主机平台的话 UNITY_ATTEN_CHANNEL 是 r 通道，移动平台的话是 a 通道*/
+                        fixed atten = tex2D(_LightTexture0, dot(lightCoord, lightCoord).rr).UNITY_ATTEN_CHANNEL;
+                    #elif defined (SPOT)
+                        float4 lightCoord = mul(unity_WorldToLight, float4(i.pos_World, 1));
+                        //若不在聚光灯的照射方向，就当然没有光照
+                        fixed atten = (lightCoord.z > 0) * tex2D(_LightTextureB0, dot(lightCoord, lightCoord).rr).UNITY_ATTEN_CHANNEL;
+                        //对于聚光灯，_LightTexture0存储的不再是基于距离的衰减纹理，而是一张基于张角范围的衰减纹理
+                        atten *= tex2D(_LightTexture0, lightCoord.xy / lightCoord.w + 0.5).w;
+                    #else
+                        fixed atten = 1.0;
+                    #endif
+                #endif
+```
+
 * 而且还需要判断顶点是否在光源的照明范围内，如果不在范围内，就不调用渲染事件。
 * `#pragma multi_compile_fwdbase` 指令可以保证我们在Shader中使用光照衰减等光照变量可以被正确赋值。
 * 如果场景中包含了多个平行光，Unity 会选择**最亮**的平行光传递给 Base Pass 进行**逐像素**处理，其他平行光会按照**逐顶点**或在 Additional Pass 中按**逐像素**的方式处理。如果场景中没有任何**平行光**，那么 Base Pass 会当成**全黑的光源**处理。我们提到过，每一个光源有 5 个属性：位置 、方向 、颜色、强度以及衰减 。对于 Base Pass 来说，它处理的逐像素光源类型一定是平行光。
