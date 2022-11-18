@@ -30,3 +30,12 @@
 <div align=center>
 <img src="https://user-images.githubusercontent.com/104584816/202620398-46dcafc2-e392-478e-89a0-bd1c9fe273db.png" width="1000" height="300">
 </div>
+
+## 5、[渲染路径、光源类型、光照衰减、阴影](https://github.com/Ared521/UnityShader/tree/main/Assets/Effects/5_LightingModel)
+
+
+
+
+
+
+
