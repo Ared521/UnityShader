@@ -6,13 +6,11 @@
 </div>
 
 ---
-## 2. UnityCG.cginc 中的一些常用的帮助函数
+## 2. Unity 的渲染路径、光源类型
+
+---
+## X. UnityCG.cginc 中的一些常用的帮助函数
 <div align=center>
 <img src="https://user-images.githubusercontent.com/104584816/202622070-46e296cf-def5-403a-9527-58d6063a720b.png" width="800" height="1350">
 </div>
-
----
-## 3. Unity 的渲染路径、光源类型
-
-
 
