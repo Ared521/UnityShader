@@ -32,7 +32,7 @@
 </div>
 
 ---
-## 5、[渲染路径、光源类型、光照衰减、阴影](https://github.com/Ared521/UnityShader/tree/main/Assets/Effects/5_LightingModel)
+## 5、[渲染路径、光源类型、光照衰减、阴影](https://github.com/Ared521/UnityShader/tree/main/Assets/Effects/5_LightingModel/Scenes/MultipleLightSources)
 
 
 
