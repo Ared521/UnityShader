@@ -22,7 +22,7 @@
 ![img](https://github.com/Ared521/UnityShader/blob/main/Assets/Resources/README_gif/StencilTest_2.gif)
 
 ---
-## 3、[IBL、SH(基于图片照明、球谐光照)](https://www.yuque.com/u27384247/pkfic1/ruk770)
+## 3、[IBL、SH(基于图片照明、球谐光照)](https://github.com/Ared521/UnityShader/tree/main/Assets/Effects/4_IBL%26SH)
 ![image](https://user-images.githubusercontent.com/104584816/201355414-ce565b4b-5ee5-4de8-82b0-d1a5d5a1ecc9.png)
 
 ---
