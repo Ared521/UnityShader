@@ -19,7 +19,8 @@
 
 > 原神里有一个场景是人物站在纸窗户后面，能够从纸窗户看到人的影子，这里实现方式用一个球代替人物模型，球正常渲染，球的子物体设置一个跟球大小一样的物体，shader 设置为模板测试代码，效果示例：
 
-![img](https://github.com/Ared521/UnityShader/blob/main/Assets/Resources/README_gif/StencilTest_2.gif)
+
+
 
 ---
 ## 3、[IBL、SH(基于图片照明、球谐光照)](https://github.com/Ared521/UnityShader/tree/main/Assets/Effects/4_IBL%26SH)
