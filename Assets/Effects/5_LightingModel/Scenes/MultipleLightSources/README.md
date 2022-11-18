@@ -29,16 +29,24 @@
 * 延迟渲染的缺点：1、不支持真正的抗锯齿（anti-aliasing）功能。2、不能处理半透明物体。3、对显卡有一定要求。如果要使用延迟渲染的话，显卡必须支持MRT(Multiple Render Targets)、Shader Mode 3.0 及以上、深度渲染纹理以及双面的模板缓冲。
 * 对于每个物体来说，第一个 Pass 仅会执行一次。
 <div align=center>
-<img src="https://user-images.githubusercontent.com/104584816/202718613-fa354798-22da-477f-b6d3-dbcb97a22666.png" width="800" height="500">
+<img src="https://user-images.githubusercontent.com/104584816/202718613-fa354798-22da-477f-b6d3-dbcb97a22666.png" width="800" height="400">
 </div>
 
 ---
 ## 2. 光源类型
 * 平行光的位置跟顶点位置无关，对于任何顶点，平行光位置都不影响光照结果(旋转的时候，平行光方向改变，会影响光照结果)。
 * 平行光、点光源、聚光灯的方向属性，都是通过光源的位置减去顶点的位置来得到该顶点指向光源方向的向量。需要注意的是，对于点光源和聚光灯，有光照衰减值，通常可以又一个函数定义。
-* 而且还需要判断顶点是否在光源的照明范围内，如果不在范围内，就不调用渲染 Pass。
+* 而且还需要判断顶点是否在光源的照明范围内，如果不在范围内，就不调用渲染事件。
 * `#pragma multi_compile_fwdbase` 指令可以保证我们在Shader中使用光照衰减等光照变量可以被正确赋值。
 * 如果场景中包含了多个平行光，Unity 会选择**最亮**的平行光传递给 Base Pass 进行**逐像素**处理，其他平行光会按照**逐顶点**或在 Additional Pass 中按**逐像素**的方式处理。如果场景中没有任何**平行光**，那么 Base Pass 会当成**全黑的光源**处理。我们提到过，每一个光源有 5 个属性：位置 、方向 、颜色、强度以及衰减 。对于 Base Pass 来说，它处理的逐像素光源类型一定是平行光。
+* 在 ForwardAdd 中 通过使用 `#pragma multi_compile_fwdadd` 编译指令，可以保证我们在 Additional Pass 中访问到正确的光照变量。注: 记得 `Blend One One`，否则会覆盖。
+* 在 ForwardAdd 中 去掉Base Pass中环境光、自发光、逐顶点光照、SH光照的部分，并添加一些对不同光源类型的支持。
+* Unity选择了使用一张纹理作为查找表(Lookup Table，LUT)，以在片元着色器中得到光源的衰减。我们首先得到光源空间下的坐标，然后使用该坐标对衰减纹理进行采样得到衰减值。
+* 例: 设置 Edit → Project Settings → Quality → Pixel Light Count = 4。 这种情况下一个物体可以接收除最亮的平行光外的 4 个逐像素光照。
+* 可在 Frame Debugger 中调试查看渲染顺序。Unity 处理这些点光源的顺序是按照它们的重要度排序的。**Unity官方文档中并没有给出光源强度、颜色和距离物体的远近是如何具体影响光源的重要度排序
+的，我们仅知道排序结果和这三者都有关系。**
+* 当把光源的 Render Mode 设置为 Important 时，当小于等于 Pixel Light Count 时，**会进行逐像素光**来处理。
+* 当把光源的 Render Mode 设置为 Not Important 时，则该光源**不会进行逐像素光**来处理。
 
 
 
