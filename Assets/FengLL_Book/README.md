@@ -163,6 +163,9 @@ Shader中包含了这样一个通用的Pass。因此，为每个Unity Shader正�
 <img src="https://user-images.githubusercontent.com/104584816/202466927-30d43e71-5b42-458b-a290-473d51298487.png" width="800" height="400">
 </div>
 
+---
+## 第六章 Unity 中的基础光照
+> ### 本章以代码为主，参考 本仓库 Effects Demo: [Effects](https://github.com/Ared521/UnityShader/Assets/Effects)
 
 
 
