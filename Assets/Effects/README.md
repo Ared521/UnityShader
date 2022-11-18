@@ -27,4 +27,6 @@
 
 ---
 ## 4、[光照模型(Blinn-Phong、PBR)](https://github.com/Ared521/UnityShader/tree/main/Assets/Effects/5_LightingModel)
-![image](https://user-images.githubusercontent.com/104584816/201355414-ce565b4b-5ee5-4de8-82b0-d1a5d5a1ecc9.png)
+<div align=center>
+<img src="https://user-images.githubusercontent.com/104584816/202620398-46dcafc2-e392-478e-89a0-bd1c9fe273db.png" width="1000" height="300">
+</div>
