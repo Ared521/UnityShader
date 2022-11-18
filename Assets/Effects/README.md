@@ -26,5 +26,5 @@
 ![image](https://user-images.githubusercontent.com/104584816/201355414-ce565b4b-5ee5-4de8-82b0-d1a5d5a1ecc9.png)
 
 ---
-## 4、[光照模型(Blinn-Phong、PBR)](https://www.yuque.com/u27384247/pkfic1/ruk770)
+## 4、[光照模型(Blinn-Phong、PBR)](https://github.com/Ared521/UnityShader/tree/main/Assets/Effects/5_LightingModel)
 ![image](https://user-images.githubusercontent.com/104584816/201355414-ce565b4b-5ee5-4de8-82b0-d1a5d5a1ecc9.png)
