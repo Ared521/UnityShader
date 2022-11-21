@@ -1,8 +1,8 @@
 # Unity 中的光照
 
-## 1. 基础光照: Lambert、Half Lambert、Phong、Blinn-Phong
+## 1. 基础光照: Lambert、Half Lambert、Phong、Blinn-Phong、PBR
 <div align=center>
-<img src="https://user-images.githubusercontent.com/104584816/202620398-46dcafc2-e392-478e-89a0-bd1c9fe273db.png" width="1000" height="300">
+<img src="https://user-images.githubusercontent.com/104584816/203103228-eeeae2e5-c8ef-4b32-afa5-1847c2d6d9e1.png" width="800" height="400">
 </div>
 
 ---
