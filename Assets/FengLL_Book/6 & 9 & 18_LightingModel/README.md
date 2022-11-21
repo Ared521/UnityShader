@@ -7,6 +7,9 @@
 
 ---
 ## 2. Unity 的渲染路径、光源类型
+<div align=center>
+<img src="https://user-images.githubusercontent.com/104584816/202725156-faab04a3-f5db-4e75-af97-9e484e7b2586.png" width="1000" height="700">
+</div>
 
 ---
 ## X. UnityCG.cginc 中的一些常用的帮助函数
