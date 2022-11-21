@@ -30,6 +30,9 @@
 <div align=center>
 <img src="https://user-images.githubusercontent.com/104584816/203103796-307390d9-75d9-4a77-9c47-65f97845b05f.png" width="1000" height="500">
 </div>
+<div align=center>
+<img src="https://user-images.githubusercontent.com/104584816/203108511-1f5006c9-5b03-4113-a78a-9bd57ff937d9.gif" width="1000" height="550">
+</div>
 
 ---
 ## 5、[渲染路径、光源类型、光照衰减、阴影](https://github.com/Ared521/UnityShader/tree/main/Assets/Effects/5_LightingModel/Scenes/MultipleLightSources)
