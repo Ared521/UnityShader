@@ -165,11 +165,11 @@ Shader中包含了这样一个通用的Pass。因此，为每个Unity Shader正�
 
 ---
 ## 第六章 Unity 中的基础光照
-> ### 本章以代码为主，参考本仓库 Effects Demo: [Lighting Effects](https://github.com/Ared521/UnityShader/tree/main/Assets/Effects/5_LightingModel)
+> ### 本章以代码为主，参考本仓库 Effects Demo: [Lighting Effects](https://github.com/Ared521/UnityShader/tree/main/Assets/FengLL_Book/6%20%26%209%20%26%2018_LightingModel)
 
 ---
 ## 第九章 更复杂的光照
-> ### 本章以代码为主，参考本仓库 Effects Demo: [渲染路径、光源类型、光照衰减、阴影](https://github.com/Ared521/UnityShader/tree/main/Assets/Effects/5_LightingModel/Scenes/MultipleLightSources)
+> ### 本章以代码为主，参考本仓库 Effects Demo: [渲染路径、光源类型、光照衰减、阴影](https://github.com/Ared521/UnityShader/tree/main/Assets/FengLL_Book/6%20%26%209%20%26%2018_LightingModel)
 
 
 
