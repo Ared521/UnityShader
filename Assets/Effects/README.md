@@ -26,9 +26,9 @@
 ![image](https://user-images.githubusercontent.com/104584816/201355414-ce565b4b-5ee5-4de8-82b0-d1a5d5a1ecc9.png)
 
 ---
-## 4、[光照模型(Blinn-Phong、PBR)](https://github.com/Ared521/UnityShader/tree/main/Assets/Effects/5_LightingModel)
+## 4、[光照模型(Blinn-Phong、PBR)](https://github.com/Ared521/UnityShader/tree/main/Assets/FengLL_Book/6%20%26%209%20%26%2018_LightingModel)
 <div align=center>
-<img src="https://user-images.githubusercontent.com/104584816/202620398-46dcafc2-e392-478e-89a0-bd1c9fe273db.png" width="1000" height="300">
+<img src="https://user-images.githubusercontent.com/104584816/203103796-307390d9-75d9-4a77-9c47-65f97845b05f.png" width="1000" height="500">
 </div>
 
 ---
