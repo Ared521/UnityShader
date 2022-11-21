@@ -1,6 +1,6 @@
 # Unity 中的光照
 
-## 1. 基础光照: Lambert、Half Lambert、Phong、Blinn-Phong、PBR
+## 1. 基础光照: Lambert、Half Lambert、Phong、Blinn-Phong、[PBR](https://github.com/Ared521/UnityShader/tree/main/Assets/Effects/5_PBR)
 <div align=center>
 <img src="https://user-images.githubusercontent.com/104584816/203103228-eeeae2e5-c8ef-4b32-afa5-1847c2d6d9e1.png" width="800" height="400">
 </div>
@@ -13,4 +13,3 @@
 <div align=center>
 <img src="https://user-images.githubusercontent.com/104584816/202622070-46e296cf-def5-403a-9527-58d6063a720b.png" width="800" height="1350">
 </div>
-
