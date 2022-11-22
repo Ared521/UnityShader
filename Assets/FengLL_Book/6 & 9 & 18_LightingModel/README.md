@@ -7,12 +7,15 @@
 
 ---
 ## 2. [Unity 的渲染路径、光源类型](https://github.com/Ared521/UnityShader/tree/main/Assets/FengLL_Book/6%20%26%209%20%26%2018_LightingModel/Scenes/RenderingPath)
+
+---
+## 3. 多光源
 <div align=center>
 <img src="https://user-images.githubusercontent.com/104584816/202725156-faab04a3-f5db-4e75-af97-9e484e7b2586.png" width="800" height="550">
 </div>
 
 ---
-## 3. 衰减、阴影
+## 4. 衰减、阴影
 
 ---
 ## X. UnityCG.cginc 中的一些常用的帮助函数
