@@ -1,5 +1,8 @@
 # Unity 的渲染路径、光源类型
 ## 1. 渲染路径
+<details>
+<summary>笔记展开 ~ </summary>
+
 ### 1.1 前向渲染(Forward Rendering Path):
 * 如果当前的显卡并不支持所选择的渲染路径，Unity会自动使用更低一级的渲染路径。
 * LightMode 标签支持的渲染路径设置如下图：
@@ -40,9 +43,13 @@
 <div align=center>
 <img src="https://github.com/Ared521/UnityShader/blob/main/Assets/Resources/README_gif/DeferredRenderingPath.gif" width="800" height="500">
 </div>
+</details>
 
 ---
 ## 2. 光源类型
+<details>
+<summary>笔记展开 ~ </summary>
+
 ### 2.1 前向渲染多光源
 <div align=center>
 <img src="https://user-images.githubusercontent.com/104584816/202833505-8b4263bb-d20f-4ee0-aeb6-3107119cee40.png" width="800" height="500">
@@ -86,4 +93,5 @@
 * **Unity官方文档中并没有给出光源强度、颜色和距离物体的远近是如何具体影响光源的重要度排序，仅知道排序结果和这三者都有关系。**
 * 当把光源的 Render Mode 设置为 Important 时，当小于等于 Pixel Light Count 时，**会进行逐像素光**来处理。
 * 当把光源的 Render Mode 设置为 Not Important 时，则该光源**不会进行逐像素光**来处理。
+</details>
 
