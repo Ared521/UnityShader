@@ -28,3 +28,7 @@ uv_WorldPos = (o.pos_World.xy - o.pos_ZeroToWorld.xy);
 half2 scan_UV = (i.uv_WorldPos + (_ScanSpeed * _Time.y));
 half4 scanColor = tex2D(_ScanTex, scan_UV) * _BloomIntensity;
 ```
+
+<div align=center>
+<img src="https://github.com/Ared521/UnityShader/blob/main/Assets/Resources/README_gif/Edge%26Scan.gif" width="800" height="400">
+</div>
