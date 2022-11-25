@@ -16,6 +16,9 @@
 
 ---
 ## 4. 衰减、阴影
+<details>
+<summary>笔记展开 ~ </summary>
+
 ### 1. 衰减(两种方式)
 #### 1）采样衰减纹理贴图: 
 * Unity 默认使用纹理查找的方式来计算逐像素的点光源和聚光灯的衰减。缺点: 1、需要预处理得到的采样纹理，纹理的大小也会影响精度。2、不直观，无法使用数据公式来计算衰减。
@@ -33,6 +36,7 @@
   float distance = length(_WorldSpaceLightPos0.xyz - i.worldPosition.xyz);
   atten = 1.0 / distance; // linear attenuation
 ```
+</details>
 
 ## 2. 阴影(书中笔记待整理 ~ )
 ---
