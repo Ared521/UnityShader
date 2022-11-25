@@ -1,5 +1,8 @@
 # IBL & SH (基于图片照明 & 球谐光照)
 ## 1、IBL:
+<details>
+<summary>笔记展开 ~ </summary>
+
 ### 1.1 IBL 执行流程:
 * 1、需要的数据有：cubeMap、AOMap、RoughnessMap。
 * 2、根据cubeMap的原理，先求出反射向量，代码如下：
@@ -37,9 +40,13 @@
     float3 final_color = env_color * ao * _Tint.rgb * _Expose;
     return float4(final_color, 1.0);
 ```
+</details>
 
 ---
 ## 2、SH:
+<details>
+<summary>笔记展开 ~ </summary>
+
 * 根据一张cubeMap图片，在 Unity 中用工具计算出里面需要的信息(Custom SHAr ~ SHBb SHC。一共7个值)，怎么计算的暂时没有研究，代码也看不懂= =
 ```
     float4 normalForSH = float4(normal_dir, 1.0);
@@ -69,6 +76,7 @@
 
     return float4(final_color,1.0);
 ```
+</details>
 
 ---
 ## $\color{red}{3、SH 具体的实现，以及间接光漫反射先挖个坑，到时候填上。}$
