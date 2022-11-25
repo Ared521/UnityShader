@@ -84,3 +84,14 @@ Shader "Effects_Unlit/1_Scan"
         }
     }
 }
+
+//fixed4 col = (0, 0, 0, 0);
+//for (int i = 0; i < 32; i++) {
+//    float2 offset = float2(sin(Random), cos(Random)) * BlurIntensity;
+//    offset *= frac(sin(i) * 12.05);
+//    float2 normal = tex2D(NormalTex, Texcoord).xy;
+//    col += tex2D(MainTex, UV + normal + offset);
+//    Random++;
+//}
+//col /= 32;
+//return col;
