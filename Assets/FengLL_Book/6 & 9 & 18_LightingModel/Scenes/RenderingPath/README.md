@@ -20,10 +20,6 @@
 * 在Additional Pass 的渲染设置中，我们还开启和设置了混合模式。这是因为，我们希望每个 Additional Pass 可以与上一次的光照结果在帧缓存中进行叠加，从而得到最终的有多个光照的渲染效果。如果我们没有开启和设置混合模式，那么 Additional Pass 的渲染结果会覆盖掉之前的渲染结果，看起来就好像该物体只受该光源的影响。通常情况下，我们选择的混合模式是`Blend One One`
 * 对于前向渲染来说，一个Unity Shader通常会定义一个Base Pass(Base Pass也可以定义多次，例如需要双面渲染等情况)以及一个 Additional Pass。一个 Base Pass 仅会执行一次(定义了多个Base Pass的情况除外)，而一个Additional Pass 会根据影响该物体的其他逐像素光源的数目被多次调用，即 **每个逐像素光源** 会执行一次 Additional Pass。
 * 根据我们使用的渲染路径(即Pass标签中LightMode的值)，Unity 会把不同的光照变量传递给 Shader。
-### 前向渲染 Frame Debugger
-<div align=center>
-<img src="https://github.com/Ared521/UnityShader/blob/main/Assets/Resources/README_gif/ForwardRenderingPath.gif" width="800" height="500">
-</div>
 
 ---
 ### 1.2 延迟渲染(Deferred Rendering Path):
@@ -38,12 +34,17 @@
 <div align=center>
 <img src="https://user-images.githubusercontent.com/104584816/202718613-fa354798-22da-477f-b6d3-dbcb97a22666.png" width="800" height="400">
 </div>
+</details>
 
-### 延迟渲染 Frame Debugger
+### 1.3 前向渲染 Frame Debugger
+<div align=center>
+<img src="https://github.com/Ared521/UnityShader/blob/main/Assets/Resources/README_gif/ForwardRenderingPath.gif" width="800" height="500">
+</div>
+
+### 1.4 延迟渲染 Frame Debugger
 <div align=center>
 <img src="https://github.com/Ared521/UnityShader/blob/main/Assets/Resources/README_gif/DeferredRenderingPath.gif" width="800" height="500">
 </div>
-</details>
 
 ---
 ## 2. 光源类型
@@ -94,4 +95,3 @@
 * 当把光源的 Render Mode 设置为 Important 时，当小于等于 Pixel Light Count 时，**会进行逐像素光**来处理。
 * 当把光源的 Render Mode 设置为 Not Important 时，则该光源**不会进行逐像素光**来处理。
 </details>
-
