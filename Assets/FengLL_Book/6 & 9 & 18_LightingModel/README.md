@@ -36,9 +36,10 @@
   float distance = length(_WorldSpaceLightPos0.xyz - i.worldPosition.xyz);
   atten = 1.0 / distance; // linear attenuation
 ```
+
+### 2. 阴影(书中笔记待整理 ~ )
 </details>
 
-## 2. 阴影(书中笔记待整理 ~ )
 ---
 ## 5. UnityCG.cginc 中的一些常用的帮助函数
 <div align=center>
