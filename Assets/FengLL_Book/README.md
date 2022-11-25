@@ -4,6 +4,9 @@
 > 笔记主要会以知识点的形式记下。
 ---
 ## 第二章 渲染流水线
+<details>
+<summary>笔记展开 ~ </summary>
+      
 ### 1.《Real-Time Rendering》以概念流水线的角度，把渲染流程分为了 3 个阶段：应用阶段、几何阶段、光栅化阶段
 <div align=center>
 <img src="https://user-images.githubusercontent.com/104584816/202356607-afaea005-3660-4506-9130-08d77bb63a3e.png" width="800" height="400">
@@ -51,9 +54,13 @@ $\color{yellow}{就是片元着色器可以访问到导数信息(这个之前做
 <div align=center>
 <img src="https://user-images.githubusercontent.com/104584816/202369212-dceba0d9-32c3-49ab-97c8-092c72dbc19a.png" width="800" height="400">
 </div>
+</details>
 
 ---
 ## 第三章 Unity Shader 基础
+<details>
+<summary>笔记展开 ~ </summary>
+      
 ### 1. ShaderLab
 * 在 Unity 中，所有的 Unity Shader 都是使用 ShaderLab 来编写的。ShaderLab 是 Unity 提供的编写 Unity Shader 的一种说明性语言，它不是真正意义上的 shader 文件，它里面可以定义一些材质所需要的所有东西，而**不仅仅是着色器代码。** Unity 在背后会根据使用的平台来把下面代码这些结构编译成真正的代码和 shader 文件，开发者只需要和 Unity Shader 打交道即可。
 ``` 
@@ -126,13 +133,17 @@ Shader中包含了这样一个通用的Pass。因此，为每个Unity Shader正�
 * Cg/HLSL 代码是嵌套在 CGPROGRAM 和 ENDCG 之间的，正如我们之前看到的示例代码一样。由于 Cg 和 DX9 风格的 HLSL 从写法上来说几乎是同一种语言，因此在 Unity 里 Cg 和 HLSL 是等价的。
 * Unity 编辑器会把这些 Cg 片段编译成低级语言，如汇编语言等。通常，Unity 会自动把这些 Cg 片段编译到所有相关平台（这里的平台是指不同的渲染平台，例如 Direct3D 9、Direct3D 11、OpenGL、OpenGL ES等）上。这些编译过程比较复杂，Unity 会使用不同的编译器来把 Cg 转换成对应平台的代码。这样就不会在切换平台时再重新编译，而且如果代码在某些平台上发生错误就可以立刻得到错误信息。
 * 当发布游戏的时候，游戏数据文件中只包含目标平台需要的编译代码，而那些在目标平台上不需要的代码部分就会被移除。例如，当发布到 Mac OS X 平台上时，DirectX 对应的代码部分就会被移除。
-
+</details>
+      
 ---
 ## 第四章 学习 Shader 所需的数学基础
 > ### 本章涉及过多数学公式，且与 Games101 内容及作业相似，笔记和总结可参考：[Ared521/Games101](https://github.com/Ared521/Games101)
 
 ---
 ## 第五章 开始 Unity Shader 学习之旅
+<details>
+<summary>笔记展开 ~ </summary>
+      
 ### 1. 语义
 * Shader 中，如 `POSITION` 将会告诉 Unity，把模型的顶点坐标赋给 `:` 左边的变量。`SV_POSITION` 则是将顶点着色器输出的裁剪空间下的顶点坐标赋给 `:` 左边的变量。如果没有这些语义来限定输入输出参数的话，渲染器就完全不知道用户的输入输出是什么。对于 fragment shader 来说，`SV_Target` 也是HLSL中的一个系统语义，它等同于告诉渲染器，把片元着色器的输出颜色存储到一个渲染目标`render target` 中，这里将输出到默认的帧缓存中。
 * `struct a2v` 中的 `float4 texcoord : TEXCOORD0`，`TEXCOORD0` 表示模型的纹理坐标，后面的数字是几，就是第几个。`#pragma target X.0` 的不同，支持的个数也不同。
@@ -162,10 +173,27 @@ Shader中包含了这样一个通用的Pass。因此，为每个Unity Shader正�
 <div align=center>
 <img src="https://user-images.githubusercontent.com/104584816/202466927-30d43e71-5b42-458b-a290-473d51298487.png" width="800" height="400">
 </div>
+</details>
 
 ---
 ## 第六章 Unity 中的基础光照
 > ### 本章以代码为主，参考本仓库 Effects Demo: [Lighting Effects](https://github.com/Ared521/UnityShader/tree/main/Assets/FengLL_Book/6%20%26%209%20%26%2018_LightingModel)
+   
+---
+## 第八章 透明效果
+<details>
+<summary>笔记展开 ~ </summary>
+
+### 1. 透明度测试: 
+* 主要一个片元的透明度不满足条件(通常是小于某个阈值)，那么它对应 的偏远就会被舍弃，被舍弃的片元将不会再进行处理，也不会对颜色缓冲产生任何影响，否则就会按照普通的不透明物体的处理方式来处理它。通常，会在片元着色器中使用 clip() 函数来进行透明度测试。 clip() 函数的输入可以是 float ~ float4，一般情况是 float。
+```
+      // Alpha Test
+      fixed4 texColor = tex2D(MainTex, i.uv);
+      clip(texColor.a - _CutOff); // _CutOff 是透明度阈值，此函数若小于 0，则该片元就会被丢弃，不会被渲染。
+```
+
+### 2. 透明度混合:
+</details>
 
 ---
 ## 第九章 更复杂的光照
