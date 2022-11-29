@@ -6,6 +6,6 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Effects/1_Scan & Edge/Scenes/Edge & Scan.unity
-    guid: 180f666dd3ff8894a98b36b8ee73885e
+    path: Assets/Effects/6_RainDrop/Scenes/RainDrop.unity
+    guid: 9eee4b5375bca1240adb49e0047299ed
   m_configObjects: {}

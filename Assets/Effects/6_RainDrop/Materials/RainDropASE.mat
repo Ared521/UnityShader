@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: RainDrop_Opaque
-  m_Shader: {fileID: 4800000, guid: 05d58772661fe8b4ca3b2a3aaf8a6b6f, type: 3}
+  m_Name: RainDropASE
+  m_Shader: {fileID: 4800000, guid: ec3ec822e4f6dd34eae380420910d4b9, type: 3}
   m_ValidKeywords: []
   m_InvalidKeywords: []
   m_LightmapFlags: 4
@@ -41,10 +41,6 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: c65b40115b46087409818a7dfc8bfe08, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _MainTex1:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
@@ -60,16 +56,8 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - _Texture0:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
     - _TextureSample0:
-        m_Texture: {fileID: 2800000, guid: c62467d7c817b564888fd3fb1c9ffd2d, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _WaterNormal:
-        m_Texture: {fileID: 2800000, guid: 5c0d5ccb929126343829927e5ea48f81, type: 3}
+        m_Texture: {fileID: 2800000, guid: c65b40115b46087409818a7dfc8bfe08, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _texcoord:
@@ -78,15 +66,18 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _BlurIntensity: 0.1
-    - _BlurIntensity1: 0.05
     - _BumpScale: 1
     - _Cutoff: 0.5
+    - _DaDu_Size: 3
     - _DetailNormalMapScale: 1
+    - _DropIntensity: 2.21
+    - _DropSize: 5
+    - _DropSpeed: 0.2
     - _DstBlend: 0
     - _GlossMapScale: 1
     - _Glossiness: 0.5
     - _GlossyReflections: 1
+    - _HorizonDistort: 1
     - _Metallic: 0
     - _Mode: 0
     - _OcclusionStrength: 1
@@ -94,16 +85,11 @@ Material:
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1
-    - _StaticWaterSize: 6
-    - _StaticWaterSize1: 5
-    - _TrackVisableIntensity: 1
-    - _TrackVisableIntensity1: 1
     - _UVSec: 0
-    - _WaterVisableIntensity: 5
-    - _WaterVisableIntensity1: 5
     - _ZWrite: 1
-    - __dirty: 0
+    - __dirty: 1
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _DropSize_Addition: {r: 1, g: 1, b: 0, a: 0}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
   m_BuildTextureStacks: []
