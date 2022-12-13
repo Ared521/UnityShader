@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1920
     height: 997
   m_ShowMode: 4
-  m_Title: Game
+  m_Title: Hierarchy
   m_RootView: {fileID: 2}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -121,7 +121,7 @@ MonoBehaviour:
   m_MinSize: {x: 400, y: 200}
   m_MaxSize: {x: 32384, y: 16192}
   vertical: 0
-  controlID: 87
+  controlID: 22886
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -141,12 +141,12 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 1210
+    width: 998
     height: 947
   m_MinSize: {x: 100, y: 200}
   m_MaxSize: {x: 8096, y: 16192}
   vertical: 1
-  controlID: 88
+  controlID: 22887
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -164,16 +164,17 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 1210
-    height: 413
+    width: 998
+    height: 319
   m_MinSize: {x: 201, y: 221}
   m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 13}
   m_Panes:
   - {fileID: 13}
   - {fileID: 14}
+  - {fileID: 15}
   m_Selected: 0
-  m_LastSelected: 1
+  m_LastSelected: 2
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -190,17 +191,16 @@ MonoBehaviour:
   m_Position:
     serializedVersion: 2
     x: 0
-    y: 413
-    width: 1210
-    height: 534
+    y: 319
+    width: 998
+    height: 628
   m_MinSize: {x: 201, y: 221}
   m_MaxSize: {x: 4001, y: 4021}
-  m_ActualView: {fileID: 15}
+  m_ActualView: {fileID: 12}
   m_Panes:
-  - {fileID: 15}
+  - {fileID: 12}
   - {fileID: 16}
   - {fileID: 17}
-  - {fileID: 12}
   m_Selected: 0
   m_LastSelected: 1
 --- !u!114 &9
@@ -218,9 +218,9 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 1210
+    x: 998
     y: 0
-    width: 221
+    width: 206
     height: 947
   m_MinSize: {x: 202, y: 221}
   m_MaxSize: {x: 4002, y: 4021}
@@ -244,9 +244,9 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 1431
+    x: 1204
     y: 0
-    width: 334
+    width: 295
     height: 947
   m_MinSize: {x: 232, y: 271}
   m_MaxSize: {x: 10002, y: 10021}
@@ -270,9 +270,9 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 1765
+    x: 1499
     y: 0
-    width: 155
+    width: 421
     height: 947
   m_MinSize: {x: 276, y: 71}
   m_MaxSize: {x: 4001, y: 4021}
@@ -289,117 +289,90 @@ MonoBehaviour:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c8bcac0d66f920e49803925a85beb0ed, type: 3}
+  m_EditorHideFlags: 1
+  m_Script: {fileID: 12015, guid: 0000000000000000e000000000000000, type: 0}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_MinSize: {x: 480, y: 270}
+  m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 4000, y: 4000}
   m_TitleContent:
-    m_Text: RainDrop_..
-    m_Image: {fileID: -5962505394399907832, guid: 0000000000000000d000000000000000, type: 0}
+    m_Text: Game
+    m_Image: {fileID: -6423792434712278376, guid: 0000000000000000d000000000000000, type: 0}
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 317
-    width: 1209
-    height: 682
+    y: 392
+    width: 997
+    height: 607
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
     m_SaveData: []
-  m_customGraph: {fileID: 0}
-  m_templatesManager: {fileID: 0}
-  m_innerEditorVariables:
-    m_liveMode: 0
-    m_outlineActiveMode: 0
-    m_nodeParametersMaximized: 1
-    m_nodePaletteMaximized: 0
-    m_expandedRenderingPlatforms: 0
-    m_expandedRenderingOptions: 0
-    m_expandedGeneralShaderOptions: 1
-    m_expandedBlendOptions: 1
-    m_expandedStencilOptions: 1
-    m_expandedVertexOptions: 0
-    m_expandedFunctionInputs: 0
-    m_expandedFunctionSwitches: 0
-    m_expandedFunctionOutputs: 0
-    m_expandedAdditionalIncludes: 0
-    m_expandedAdditionalDefines: 0
-    m_expandedAdditionalDirectives: 0
-    m_expandedCustomTags: 0
-    m_expandedAdditionalSurfaceOptions: 0
-    m_expandedAdditionalPragmas: 0
-    m_expandedDependencies: 0
-    m_expandedBlendModeModule: 0
-    m_expandedDepth: 1
-    m_expandedTesselation: 0
-    m_expandedProperties: 1
-    m_expandedUsePass: 0
-  m_lastpath: Assets/Effects/6_RainDrop/Shaders/RainDrop_ASE.shader
-  m_selectionMode: 0
-  m_duplicatePreventionBuffer:
-    m_availableUVChannelsArray: ffffffffffffffffffffffffffffffff
-  m_inactivityTime: 2150.6895957
-  m_lastTimeSaved: 2022.5080391000001
-  m_cacheSaveOp: 0
-  m_mainGraphInstance: {fileID: 0}
-  m_cameraOffset: {x: 2929.0771, y: 200.41599}
-  m_cameraZoom: 1.4841851
-  m_minNodePos: {x: -3485.0784, y: -1391.291}
-  m_maxNodePos: {x: 4183.4365, y: 1101.5684}
-  m_isDirty: 0
-  m_saveIsDirty: 0
-  m_repaintIsDirty: 0
-  m_liveShaderEditing: 0
-  m_shaderIsModified: 0
-  m_lastOpenedLocation: Assets/Effects/6_RainDrop/Shaders/RainDrop_ASE.shader
-  m_zoomChanged: 0
-  m_lastWindowWidth: 1209
-  m_graphCount: 1
-  m_currentInactiveTime: 2.748421999999664
-  m_currentNodeAvailability: 1
-  m_nodeParametersWindowMaximized: 1
-  m_paletteWindowMaximized: 1
-  m_isShaderFunctionWindow: 0
-  m_openedShaderFunction: {fileID: 0}
-  m_openedAssetFromNode: 0
-  m_messages:
-  - ItemType: 0
-    ItemMessage: No nodes selected to share
-    ItemTime: 299.34814453125
-    ItemOwnerId: -1
-  - ItemType: 0
-    ItemMessage: No nodes selected to share
-    ItemTime: 298.5084228515625
-    ItemOwnerId: -1
-  - ItemType: 0
-    ItemMessage: No nodes selected to share
-    ItemTime: 296.74493408203125
-    ItemOwnerId: -1
-  - ItemType: 0
-    ItemMessage: 'Duplicate name found on edited node.
-
-      Assigning first valid
-      one Vector 2'
-    ItemTime: 2196.68212890625
-    ItemOwnerId: 67
-  - ItemType: 0
-    ItemMessage: 'Input Port Tex from node Texture Sample has type SAMPLER2D
-
-      which
-      is incompatible with connection of type FLOAT2 from port 0 on node Add'
-    ItemTime: 1432.206787109375
-    ItemOwnerId: 98
-  m_maxMsgWidth: 400
-  m_maximizeMessages: 0
-  m_frameCounter: 0
-  m_fpsTime: 0
-  m_fpsDisplay: 
-  CheckFunctions: 1
-  MouseInteracted: 0
-  State: 0
+  m_SerializedViewNames: []
+  m_SerializedViewValues: []
+  m_PlayModeViewName: GameView
+  m_ShowGizmos: 0
+  m_TargetDisplay: 0
+  m_ClearColor: {r: 0, g: 0, b: 0, a: 0}
+  m_TargetSize: {x: 1920, y: 1080}
+  m_TextureFilterMode: 0
+  m_TextureHideFlags: 61
+  m_RenderIMGUI: 1
+  m_EnterPlayModeBehavior: 0
+  m_UseMipMap: 0
+  m_VSyncEnabled: 0
+  m_Gizmos: 0
+  m_Stats: 0
+  m_SelectedSizes: 03000000000000000000000000000000000000000000000000000000000000000000000000000000
+  m_ZoomArea:
+    m_HRangeLocked: 0
+    m_VRangeLocked: 0
+    hZoomLockedByDefault: 0
+    vZoomLockedByDefault: 0
+    m_HBaseRangeMin: -960
+    m_HBaseRangeMax: 960
+    m_VBaseRangeMin: -540
+    m_VBaseRangeMax: 540
+    m_HAllowExceedBaseRangeMin: 1
+    m_HAllowExceedBaseRangeMax: 1
+    m_VAllowExceedBaseRangeMin: 1
+    m_VAllowExceedBaseRangeMax: 1
+    m_ScaleWithWindow: 0
+    m_HSlider: 0
+    m_VSlider: 0
+    m_IgnoreScrollWheelUntilClicked: 0
+    m_EnableMouseInput: 1
+    m_EnableSliderZoomHorizontal: 0
+    m_EnableSliderZoomVertical: 0
+    m_UniformScale: 1
+    m_UpDirection: 1
+    m_DrawArea:
+      serializedVersion: 2
+      x: 0
+      y: 21
+      width: 997
+      height: 586
+    m_Scale: {x: 0.51927084, y: 0.51927084}
+    m_Translation: {x: 498.5, y: 293}
+    m_MarginLeft: 0
+    m_MarginRight: 0
+    m_MarginTop: 0
+    m_MarginBottom: 0
+    m_LastShownAreaInsideMargins:
+      serializedVersion: 2
+      x: -960
+      y: -564.25275
+      width: 1920
+      height: 1128.5055
+    m_MinimalGUI: 1
+  m_defaultScale: 0.51927084
+  m_LastWindowPixelSize: {x: 997, y: 607}
+  m_ClearInEditMode: 1
+  m_NoCameraWarning: 1
+  m_LowResolutionForAspectRatios: 01000000000000000000
+  m_XRRenderMode: 0
+  m_RenderTexture: {fileID: 0}
 --- !u!114 &13
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -422,8 +395,8 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 73
-    width: 1209
-    height: 392
+    width: 997
+    height: 298
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -518,12 +491,12 @@ MonoBehaviour:
       layout: 4
     - dockPosition: 1
       containerId: overlay-container--right
-      floating: 0
+      floating: 1
       collapsed: 0
       displayed: 0
-      snapOffset: {x: 0, y: 0}
+      snapOffset: {x: -282, y: -155}
       snapOffsetDelta: {x: 0, y: 0}
-      snapCorner: 0
+      snapCorner: 3
       id: Scene View/Camera
       index: 1
       layout: 4
@@ -658,9 +631,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -8.662626, y: 5.3759074, z: 4.683712}
+    m_Target: {x: 92.56, y: 4.951, z: 28.39}
     speed: 2
-    m_Value: {x: -8.662626, y: 5.3759074, z: 4.683712}
+    m_Value: {x: 92.56, y: 4.951, z: 28.39}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -707,13 +680,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: 0.09711268, y: -0.2033941, z: 0.03924005, w: 0.97347856}
+    m_Target: {x: -0.008399133, y: 0.95554763, z: -0.28191528, w: -0.08818655}
     speed: 2
-    m_Value: {x: 0.09711266, y: -0.20339407, z: 0.039240047, w: 0.97347844}
+    m_Value: {x: -0.008397475, y: 0.95535904, z: -0.28185964, w: -0.08816914}
   m_Size:
-    m_Target: 14.015357
+    m_Target: 12.124355
     speed: 2
-    m_Value: 14.015357
+    m_Value: 12.124355
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -731,7 +704,7 @@ MonoBehaviour:
     m_FarClip: 10000
     m_DynamicClip: 1
     m_OcclusionCulling: 0
-  m_LastSceneViewRotation: {x: -0.08717229, y: 0.89959055, z: -0.21045254, w: -0.3726226}
+  m_LastSceneViewRotation: {x: 0.11842856, y: 0.025441857, z: 0.015547496, w: 0.99256307}
   m_LastSceneViewOrtho: 0
   m_ReplacementShader: {fileID: 0}
   m_ReplacementString: 
@@ -759,19 +732,19 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 72.571434
-    width: 1220.1428
-    height: 539
+    y: 73
+    width: 1155
+    height: 646
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
     m_SaveData: []
-  m_ListWidth: 300
+  m_ListWidth: 379
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 00000000
-    m_LastClickedID: 0
-    m_ExpandedIDs: f6fffffff7fffffffcfffffffdfffffffeffffff00000000
+    m_SelectedIDs: 0d000000
+    m_LastClickedID: 13
+    m_ExpandedIDs: eeffffffeffffffff0fffffff2fffffff5fffffff6fffffff7fffffff8fffffff9fffffffafffffffbfffffffcfffffffdfffffffeffffff00000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -797,90 +770,26 @@ MonoBehaviour:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
-  m_EditorHideFlags: 1
-  m_Script: {fileID: 12015, guid: 0000000000000000e000000000000000, type: 0}
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 12111, guid: 0000000000000000e000000000000000, type: 0}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_MinSize: {x: 200, y: 200}
+  m_MinSize: {x: 455, y: 354}
   m_MaxSize: {x: 4000, y: 4000}
   m_TitleContent:
-    m_Text: Game
-    m_Image: {fileID: -6423792434712278376, guid: 0000000000000000d000000000000000, type: 0}
+    m_Text: Asset Store
+    m_Image: {fileID: -8693916549880196297, guid: 0000000000000000d000000000000000, type: 0}
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 486
-    width: 1209
-    height: 513
+    y: 73
+    width: 1218
+    height: 562
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
     m_SaveData: []
-  m_SerializedViewNames: []
-  m_SerializedViewValues: []
-  m_PlayModeViewName: GameView
-  m_ShowGizmos: 0
-  m_TargetDisplay: 0
-  m_ClearColor: {r: 0, g: 0, b: 0, a: 0}
-  m_TargetSize: {x: 1920, y: 1080}
-  m_TextureFilterMode: 0
-  m_TextureHideFlags: 61
-  m_RenderIMGUI: 1
-  m_EnterPlayModeBehavior: 0
-  m_UseMipMap: 0
-  m_VSyncEnabled: 0
-  m_Gizmos: 0
-  m_Stats: 0
-  m_SelectedSizes: 03000000000000000000000000000000000000000000000000000000000000000000000000000000
-  m_ZoomArea:
-    m_HRangeLocked: 0
-    m_VRangeLocked: 0
-    hZoomLockedByDefault: 0
-    vZoomLockedByDefault: 0
-    m_HBaseRangeMin: -960
-    m_HBaseRangeMax: 960
-    m_VBaseRangeMin: -540
-    m_VBaseRangeMax: 540
-    m_HAllowExceedBaseRangeMin: 1
-    m_HAllowExceedBaseRangeMax: 1
-    m_VAllowExceedBaseRangeMin: 1
-    m_VAllowExceedBaseRangeMax: 1
-    m_ScaleWithWindow: 0
-    m_HSlider: 0
-    m_VSlider: 0
-    m_IgnoreScrollWheelUntilClicked: 0
-    m_EnableMouseInput: 1
-    m_EnableSliderZoomHorizontal: 0
-    m_EnableSliderZoomVertical: 0
-    m_UniformScale: 1
-    m_UpDirection: 1
-    m_DrawArea:
-      serializedVersion: 2
-      x: 0
-      y: 21
-      width: 1209
-      height: 492
-    m_Scale: {x: 0.45555556, y: 0.45555556}
-    m_Translation: {x: 604.5, y: 246}
-    m_MarginLeft: 0
-    m_MarginRight: 0
-    m_MarginTop: 0
-    m_MarginBottom: 0
-    m_LastShownAreaInsideMargins:
-      serializedVersion: 2
-      x: -1326.9512
-      y: -540
-      width: 2653.9023
-      height: 1080
-    m_MinimalGUI: 1
-  m_defaultScale: 0.45555556
-  m_LastWindowPixelSize: {x: 1209, y: 513}
-  m_ClearInEditMode: 1
-  m_NoCameraWarning: 1
-  m_LowResolutionForAspectRatios: 01000000000000000000
-  m_XRRenderMode: 0
-  m_RenderTexture: {fileID: 0}
 --- !u!114 &16
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -896,15 +805,15 @@ MonoBehaviour:
   m_MinSize: {x: 480, y: 270}
   m_MaxSize: {x: 4000, y: 4000}
   m_TitleContent:
-    m_Text: 6_RainDro..
-    m_Image: {fileID: -5962505394399907832, guid: 0000000000000000d000000000000000, type: 0}
+    m_Text: WaterWav..
+    m_Image: {fileID: 5596697988196858232, guid: 0000000000000000d000000000000000, type: 0}
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 486
-    width: 1209
-    height: 513
+    y: 385
+    width: 1166
+    height: 614
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -937,36 +846,48 @@ MonoBehaviour:
     m_expandedTesselation: 0
     m_expandedProperties: 1
     m_expandedUsePass: 0
-  m_lastpath: Assets/Effects/6_RainDrop/Shaders/RainDrop_Opaque.shader
-  m_selectionMode: 0
+  m_lastpath: Assets/Effects/8_Postprocessing/1_UnderWater/Materials/WaterWave.mat
+  m_selectionMode: 1
   m_duplicatePreventionBuffer:
     m_availableUVChannelsArray: ffffffffffffffffffffffffffffffff
-  m_inactivityTime: 2185.9410477
-  m_lastTimeSaved: 2164.0951214
+  m_inactivityTime: 5955.7089052
+  m_lastTimeSaved: 5954.5045724
   m_cacheSaveOp: 0
   m_mainGraphInstance: {fileID: 0}
-  m_cameraOffset: {x: 2779.954, y: -852.8677}
-  m_cameraZoom: 2.380884
-  m_minNodePos: {x: -3470.104, y: -1395.835}
-  m_maxNodePos: {x: 4346.1084, y: 1948.505}
+  m_cameraOffset: {x: 1805.2919, y: 1498.7725}
+  m_cameraZoom: 4.0014157
+  m_minNodePos: {x: -2436.834, y: -1548.159}
+  m_maxNodePos: {x: 4050.9912, y: 1483.4722}
   m_isDirty: 0
-  m_saveIsDirty: 0
-  m_repaintIsDirty: 0
+  m_saveIsDirty: 1
+  m_repaintIsDirty: 1
   m_liveShaderEditing: 0
   m_shaderIsModified: 0
-  m_lastOpenedLocation: Assets/Effects/6_RainDrop/Shaders/RainDrop_Opaque.shader
+  m_lastOpenedLocation: Assets/Effects/8_Postprocessing/1_UnderWater/Shaders/WaterWave.shader
   m_zoomChanged: 0
-  m_lastWindowWidth: 1209
+  m_lastWindowWidth: 1166
   m_graphCount: 1
-  m_currentInactiveTime: -2102.6126870000003
+  m_currentInactiveTime: 1.0180780000000595
   m_currentNodeAvailability: 1
   m_nodeParametersWindowMaximized: 1
   m_paletteWindowMaximized: 1
   m_isShaderFunctionWindow: 0
   m_openedShaderFunction: {fileID: 0}
   m_openedAssetFromNode: 0
-  m_messages: []
-  m_maxMsgWidth: 100
+  m_messages:
+  - ItemType: 1
+    ItemMessage: Local variable name 'Foam' already being used. Reverting back to
+      'Foam'.
+    ItemTime: 1546.7418212890625
+    ItemOwnerId: 166
+  - ItemType: 0
+    ItemMessage: 'Duplicate name found on edited node.
+
+      Assigning first valid
+      one Texture Sample 0'
+    ItemTime: 1155.0989990234375
+    ItemOwnerId: 158
+  m_maxMsgWidth: 400
   m_maximizeMessages: 0
   m_frameCounter: 0
   m_fpsTime: 0
@@ -989,15 +910,15 @@ MonoBehaviour:
   m_MinSize: {x: 480, y: 270}
   m_MaxSize: {x: 4000, y: 4000}
   m_TitleContent:
-    m_Text: RainDropU..
-    m_Image: {fileID: 2800000, guid: 50be8291f9514914aa55c66c49da67cf, type: 3}
+    m_Text: Water
+    m_Image: {fileID: -5962505394399907832, guid: 0000000000000000d000000000000000, type: 0}
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 317
-    width: 1209
-    height: 682
+    y: 385
+    width: 1166
+    height: 614
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -1030,33 +951,33 @@ MonoBehaviour:
     m_expandedTesselation: 0
     m_expandedProperties: 1
     m_expandedUsePass: 0
-  m_lastpath: Assets/Effects/6_RainDrop/Shaders/RainDropUV.asset
-  m_selectionMode: 2
+  m_lastpath: Assets/Effects/8_Postprocessing/1_UnderWater/Shaders/Water.shader
+  m_selectionMode: 0
   m_duplicatePreventionBuffer:
     m_availableUVChannelsArray: ffffffffffffffffffffffffffffffff
-  m_inactivityTime: 2161.5006086
-  m_lastTimeSaved: 2161.2893173
+  m_inactivityTime: 5958.6949955
+  m_lastTimeSaved: 5939.839923
   m_cacheSaveOp: 0
   m_mainGraphInstance: {fileID: 0}
-  m_cameraOffset: {x: -353.1461, y: 309.7087}
-  m_cameraZoom: 1.8514204
-  m_minNodePos: {x: -3070.171, y: -964.569}
-  m_maxNodePos: {x: 2220.017, y: 1463.9}
+  m_cameraOffset: {x: 4271.521, y: 327.90378}
+  m_cameraZoom: 4.733826
+  m_minNodePos: {x: -2997.522, y: -1032.661}
+  m_maxNodePos: {x: 635.0019, y: 2058.177}
   m_isDirty: 0
-  m_saveIsDirty: 0
+  m_saveIsDirty: 1
   m_repaintIsDirty: 0
   m_liveShaderEditing: 0
   m_shaderIsModified: 0
-  m_lastOpenedLocation: Assets/Effects/6_RainDrop/Shaders/RainDropUV.asset
+  m_lastOpenedLocation: Assets/Effects/8_Postprocessing/1_UnderWater/Shaders/Water.shader
   m_zoomChanged: 0
-  m_lastWindowWidth: 1209
+  m_lastWindowWidth: 1166
   m_graphCount: 1
-  m_currentInactiveTime: 0.8411525999999867
+  m_currentInactiveTime: 1.0688404000002265
   m_currentNodeAvailability: 1
   m_nodeParametersWindowMaximized: 1
   m_paletteWindowMaximized: 1
-  m_isShaderFunctionWindow: 1
-  m_openedShaderFunction: {fileID: 11400000, guid: 60d3515a1dae5ce488115846233df0a6, type: 2}
+  m_isShaderFunctionWindow: 0
+  m_openedShaderFunction: {fileID: 0}
   m_openedAssetFromNode: 0
   m_messages: []
   m_maxMsgWidth: 100
@@ -1087,9 +1008,9 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 1210
+    x: 998
     y: 73
-    width: 219
+    width: 204
     height: 926
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
@@ -1100,21 +1021,21 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 84b0ffff4eb3ffff72b4ffff0afbffff
+      m_ExpandedIDs: 2cf5ffff0afbffffa8540000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: 
-        m_OriginalName: 
+        m_Name: Camera
+        m_OriginalName: Camera
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
-        m_UserData: 0
+        m_UserData: 21660
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
-        m_OriginalEventType: 11
+        m_OriginalEventType: 0
         m_IsRenamingFilename: 0
         m_ClientGUIView: {fileID: 9}
       m_SearchString: 
@@ -1144,9 +1065,9 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 1431
+    x: 1204
     y: 73
-    width: 332
+    width: 293
     height: 926
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
@@ -1179,7 +1100,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: ce850000
     m_LastClickedID: 34254
-    m_ExpandedIDs: 00000000285400002a5400002c5400002e54000030540000325400003454000036540000385400003a5400003c5400003e54000040540000425400004454000046540000485400004a5400004c5400004e5400005054000052540000
+    m_ExpandedIDs: ffffffff00000000ea570000ec570000ee570000f0570000f2570000f4570000f6570000f8570000fa570000fc570000fe57000000580000025800000458000006580000085800000a5800000c5800000e58000010580000125800001458000016580000185800001a5800001c5800001e58000020580000225800002458000026580000285800002a5800002c5800002e58000030580000325800003458000036580000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1207,7 +1128,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: ffffffff00000000285400002a5400002c5400002e54000030540000325400003454000036540000385400003a5400003c5400003e54000040540000425400004454000046540000485400004a5400004c5400004e5400005054000052540000
+    m_ExpandedIDs: ffffffff00000000ea570000ec570000ee570000f0570000f2570000f4570000f6570000f8570000fa570000fc570000fe57000000580000025800000458000006580000085800000a5800000c58000010580000125800001458000016580000185800001a5800001c5800001e58000020580000225800002458000026580000285800002a5800002c5800002e580000325800003458000036580000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1234,7 +1155,7 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 1
+    m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: 
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -1259,7 +1180,7 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
     m_NewAssetIndexInList: -1
-    m_ScrollPosition: {x: 0, y: 0}
+    m_ScrollPosition: {x: 0, y: 2862}
     m_GridSize: 64
   m_SkipHiddenPackages: 0
   m_DirectoriesAreaWidth: 50
@@ -1283,9 +1204,9 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 1765
+    x: 1499
     y: 73
-    width: 154
+    width: 420
     height: 926
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
@@ -1294,7 +1215,7 @@ MonoBehaviour:
   m_ObjectsLockedBeforeSerialization: []
   m_InstanceIDsLockedBeforeSerialization: 
   m_PreviewResizer:
-    m_CachedPref: 403
+    m_CachedPref: 348
     m_ControlHash: -371814159
     m_PrefName: Preview_InspectorPreview
   m_LastInspectedObjectInstanceID: -1
