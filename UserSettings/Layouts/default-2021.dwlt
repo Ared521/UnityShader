@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1920
     height: 997
   m_ShowMode: 4
-  m_Title: Hierarchy
+  m_Title: Inspector
   m_RootView: {fileID: 2}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -121,7 +121,7 @@ MonoBehaviour:
   m_MinSize: {x: 400, y: 200}
   m_MaxSize: {x: 32384, y: 16192}
   vertical: 0
-  controlID: 22886
+  controlID: 299
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -141,12 +141,12 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 998
+    width: 1287
     height: 947
   m_MinSize: {x: 100, y: 200}
   m_MaxSize: {x: 8096, y: 16192}
   vertical: 1
-  controlID: 22887
+  controlID: 300
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -164,15 +164,15 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 998
-    height: 319
-  m_MinSize: {x: 201, y: 221}
-  m_MaxSize: {x: 4001, y: 4021}
-  m_ActualView: {fileID: 13}
+    width: 1287
+    height: 309
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_ActualView: {fileID: 14}
   m_Panes:
-  - {fileID: 13}
   - {fileID: 14}
   - {fileID: 15}
+  - {fileID: 16}
   m_Selected: 0
   m_LastSelected: 2
 --- !u!114 &8
@@ -191,16 +191,15 @@ MonoBehaviour:
   m_Position:
     serializedVersion: 2
     x: 0
-    y: 319
-    width: 998
-    height: 628
+    y: 309
+    width: 1287
+    height: 638
   m_MinSize: {x: 201, y: 221}
   m_MaxSize: {x: 4001, y: 4021}
-  m_ActualView: {fileID: 12}
+  m_ActualView: {fileID: 13}
   m_Panes:
+  - {fileID: 13}
   - {fileID: 12}
-  - {fileID: 16}
-  - {fileID: 17}
   m_Selected: 0
   m_LastSelected: 1
 --- !u!114 &9
@@ -218,15 +217,15 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 998
+    x: 1287
     y: 0
-    width: 206
+    width: 194
     height: 947
-  m_MinSize: {x: 202, y: 221}
-  m_MaxSize: {x: 4002, y: 4021}
-  m_ActualView: {fileID: 18}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_ActualView: {fileID: 17}
   m_Panes:
-  - {fileID: 18}
+  - {fileID: 17}
   m_Selected: 0
   m_LastSelected: 0
 --- !u!114 &10
@@ -244,15 +243,15 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 1204
+    x: 1481
     y: 0
-    width: 295
+    width: 129
     height: 947
   m_MinSize: {x: 232, y: 271}
   m_MaxSize: {x: 10002, y: 10021}
-  m_ActualView: {fileID: 19}
+  m_ActualView: {fileID: 18}
   m_Panes:
-  - {fileID: 19}
+  - {fileID: 18}
   m_Selected: 0
   m_LastSelected: 0
 --- !u!114 &11
@@ -270,18 +269,111 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 1499
+    x: 1610
     y: 0
-    width: 421
+    width: 310
     height: 947
-  m_MinSize: {x: 276, y: 71}
-  m_MaxSize: {x: 4001, y: 4021}
-  m_ActualView: {fileID: 20}
+  m_MinSize: {x: 275, y: 50}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_ActualView: {fileID: 19}
   m_Panes:
-  - {fileID: 20}
+  - {fileID: 19}
   m_Selected: 0
   m_LastSelected: 0
 --- !u!114 &12
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8bcac0d66f920e49803925a85beb0ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_MinSize: {x: 480, y: 270}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_TitleContent:
+    m_Text: Water
+    m_Image: {fileID: -5962505394399907832, guid: 0000000000000000d000000000000000, type: 0}
+    m_Tooltip: 
+  m_Pos:
+    serializedVersion: 2
+    x: 0
+    y: 382
+    width: 1286
+    height: 617
+  m_ViewDataDictionary: {fileID: 0}
+  m_OverlayCanvas:
+    m_LastAppliedPresetName: Default
+    m_SaveData: []
+  m_customGraph: {fileID: 0}
+  m_templatesManager: {fileID: 0}
+  m_innerEditorVariables:
+    m_liveMode: 0
+    m_outlineActiveMode: 0
+    m_nodeParametersMaximized: 1
+    m_nodePaletteMaximized: 0
+    m_expandedRenderingPlatforms: 0
+    m_expandedRenderingOptions: 0
+    m_expandedGeneralShaderOptions: 1
+    m_expandedBlendOptions: 1
+    m_expandedStencilOptions: 1
+    m_expandedVertexOptions: 0
+    m_expandedFunctionInputs: 0
+    m_expandedFunctionSwitches: 0
+    m_expandedFunctionOutputs: 0
+    m_expandedAdditionalIncludes: 0
+    m_expandedAdditionalDefines: 0
+    m_expandedAdditionalDirectives: 0
+    m_expandedCustomTags: 0
+    m_expandedAdditionalSurfaceOptions: 0
+    m_expandedAdditionalPragmas: 0
+    m_expandedDependencies: 0
+    m_expandedBlendModeModule: 0
+    m_expandedDepth: 1
+    m_expandedTesselation: 0
+    m_expandedProperties: 1
+    m_expandedUsePass: 0
+  m_lastpath: Assets/Effects/8_Postprocessing/1_UnderWater/Shaders/Water.shader
+  m_selectionMode: 0
+  m_duplicatePreventionBuffer:
+    m_availableUVChannelsArray: ffffffffffffffffffffffffffffffff
+  m_inactivityTime: 264.4301009
+  m_lastTimeSaved: 263.4151518
+  m_cacheSaveOp: 0
+  m_mainGraphInstance: {fileID: 0}
+  m_cameraOffset: {x: 2117.8, y: 499.6064}
+  m_cameraZoom: 2.8292208
+  m_minNodePos: {x: -2997.522, y: -1032.661}
+  m_maxNodePos: {x: 635.0019, y: 2058.177}
+  m_isDirty: 0
+  m_saveIsDirty: 1
+  m_repaintIsDirty: 0
+  m_liveShaderEditing: 0
+  m_shaderIsModified: 0
+  m_lastOpenedLocation: Assets/Effects/8_Postprocessing/1_UnderWater/Shaders/Water.shader
+  m_zoomChanged: 0
+  m_lastWindowWidth: 1286
+  m_graphCount: 1
+  m_currentInactiveTime: 584.6241998
+  m_currentNodeAvailability: 1
+  m_nodeParametersWindowMaximized: 1
+  m_paletteWindowMaximized: 1
+  m_isShaderFunctionWindow: 0
+  m_openedShaderFunction: {fileID: 0}
+  m_openedAssetFromNode: 0
+  m_messages: []
+  m_maxMsgWidth: 100
+  m_maximizeMessages: 0
+  m_frameCounter: 0
+  m_fpsTime: 0
+  m_fpsDisplay: 
+  CheckFunctions: 0
+  MouseInteracted: 0
+  State: 0
+--- !u!114 &13
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -302,9 +394,9 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 392
-    width: 997
-    height: 607
+    y: 382
+    width: 1286
+    height: 617
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -351,29 +443,29 @@ MonoBehaviour:
       serializedVersion: 2
       x: 0
       y: 21
-      width: 997
-      height: 586
-    m_Scale: {x: 0.51927084, y: 0.51927084}
-    m_Translation: {x: 498.5, y: 293}
+      width: 1286
+      height: 596
+    m_Scale: {x: 0.55185187, y: 0.55185187}
+    m_Translation: {x: 643, y: 298}
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
-      x: -960
-      y: -564.25275
-      width: 1920
-      height: 1128.5055
+      x: -1165.1677
+      y: -540
+      width: 2330.3354
+      height: 1080
     m_MinimalGUI: 1
-  m_defaultScale: 0.51927084
-  m_LastWindowPixelSize: {x: 997, y: 607}
+  m_defaultScale: 0.55185187
+  m_LastWindowPixelSize: {x: 1286, y: 617}
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
   m_LowResolutionForAspectRatios: 01000000000000000000
   m_XRRenderMode: 0
   m_RenderTexture: {fileID: 0}
---- !u!114 &13
+--- !u!114 &14
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -395,8 +487,8 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 73
-    width: 997
-    height: 298
+    width: 1286
+    height: 288
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -494,7 +586,7 @@ MonoBehaviour:
       floating: 1
       collapsed: 0
       displayed: 0
-      snapOffset: {x: -282, y: -155}
+      snapOffset: {x: -113, y: -82}
       snapOffsetDelta: {x: 0, y: 0}
       snapCorner: 3
       id: Scene View/Camera
@@ -631,9 +723,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 92.56, y: 4.951, z: 28.39}
+    m_Target: {x: 77.86659, y: 0.52793026, z: 27.02067}
     speed: 2
-    m_Value: {x: 92.56, y: 4.951, z: 28.39}
+    m_Value: {x: 77.86659, y: 0.52793026, z: 27.02067}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -680,13 +772,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: -0.008399133, y: 0.95554763, z: -0.28191528, w: -0.08818655}
+    m_Target: {x: 0.376403, y: -0.30216697, z: 0.15143867, w: 0.86283624}
     speed: 2
-    m_Value: {x: -0.008397475, y: 0.95535904, z: -0.28185964, w: -0.08816914}
+    m_Value: {x: 0.37632698, y: -0.30210593, z: 0.15140808, w: 0.86266196}
   m_Size:
-    m_Target: 12.124355
+    m_Target: 6.5710363
     speed: 2
-    m_Value: 12.124355
+    m_Value: 6.5710363
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -711,7 +803,7 @@ MonoBehaviour:
   m_SceneVisActive: 1
   m_LastLockedObject: {fileID: 0}
   m_ViewIsLockedToObject: 0
---- !u!114 &14
+--- !u!114 &15
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -762,7 +854,7 @@ MonoBehaviour:
       m_IsRenamingFilename: 0
       m_ClientGUIView: {fileID: 0}
     m_SearchString: 
---- !u!114 &15
+--- !u!114 &16
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -790,205 +882,7 @@ MonoBehaviour:
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
     m_SaveData: []
---- !u!114 &16
-MonoBehaviour:
-  m_ObjectHideFlags: 52
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c8bcac0d66f920e49803925a85beb0ed, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_MinSize: {x: 480, y: 270}
-  m_MaxSize: {x: 4000, y: 4000}
-  m_TitleContent:
-    m_Text: WaterWav..
-    m_Image: {fileID: 5596697988196858232, guid: 0000000000000000d000000000000000, type: 0}
-    m_Tooltip: 
-  m_Pos:
-    serializedVersion: 2
-    x: 0
-    y: 385
-    width: 1166
-    height: 614
-  m_ViewDataDictionary: {fileID: 0}
-  m_OverlayCanvas:
-    m_LastAppliedPresetName: Default
-    m_SaveData: []
-  m_customGraph: {fileID: 0}
-  m_templatesManager: {fileID: 0}
-  m_innerEditorVariables:
-    m_liveMode: 0
-    m_outlineActiveMode: 0
-    m_nodeParametersMaximized: 1
-    m_nodePaletteMaximized: 0
-    m_expandedRenderingPlatforms: 0
-    m_expandedRenderingOptions: 0
-    m_expandedGeneralShaderOptions: 1
-    m_expandedBlendOptions: 1
-    m_expandedStencilOptions: 1
-    m_expandedVertexOptions: 0
-    m_expandedFunctionInputs: 0
-    m_expandedFunctionSwitches: 0
-    m_expandedFunctionOutputs: 0
-    m_expandedAdditionalIncludes: 0
-    m_expandedAdditionalDefines: 0
-    m_expandedAdditionalDirectives: 0
-    m_expandedCustomTags: 0
-    m_expandedAdditionalSurfaceOptions: 0
-    m_expandedAdditionalPragmas: 0
-    m_expandedDependencies: 0
-    m_expandedBlendModeModule: 0
-    m_expandedDepth: 1
-    m_expandedTesselation: 0
-    m_expandedProperties: 1
-    m_expandedUsePass: 0
-  m_lastpath: Assets/Effects/8_Postprocessing/1_UnderWater/Materials/WaterWave.mat
-  m_selectionMode: 1
-  m_duplicatePreventionBuffer:
-    m_availableUVChannelsArray: ffffffffffffffffffffffffffffffff
-  m_inactivityTime: 5955.7089052
-  m_lastTimeSaved: 5954.5045724
-  m_cacheSaveOp: 0
-  m_mainGraphInstance: {fileID: 0}
-  m_cameraOffset: {x: 1805.2919, y: 1498.7725}
-  m_cameraZoom: 4.0014157
-  m_minNodePos: {x: -2436.834, y: -1548.159}
-  m_maxNodePos: {x: 4050.9912, y: 1483.4722}
-  m_isDirty: 0
-  m_saveIsDirty: 1
-  m_repaintIsDirty: 1
-  m_liveShaderEditing: 0
-  m_shaderIsModified: 0
-  m_lastOpenedLocation: Assets/Effects/8_Postprocessing/1_UnderWater/Shaders/WaterWave.shader
-  m_zoomChanged: 0
-  m_lastWindowWidth: 1166
-  m_graphCount: 1
-  m_currentInactiveTime: 1.0180780000000595
-  m_currentNodeAvailability: 1
-  m_nodeParametersWindowMaximized: 1
-  m_paletteWindowMaximized: 1
-  m_isShaderFunctionWindow: 0
-  m_openedShaderFunction: {fileID: 0}
-  m_openedAssetFromNode: 0
-  m_messages:
-  - ItemType: 1
-    ItemMessage: Local variable name 'Foam' already being used. Reverting back to
-      'Foam'.
-    ItemTime: 1546.7418212890625
-    ItemOwnerId: 166
-  - ItemType: 0
-    ItemMessage: 'Duplicate name found on edited node.
-
-      Assigning first valid
-      one Texture Sample 0'
-    ItemTime: 1155.0989990234375
-    ItemOwnerId: 158
-  m_maxMsgWidth: 400
-  m_maximizeMessages: 0
-  m_frameCounter: 0
-  m_fpsTime: 0
-  m_fpsDisplay: 
-  CheckFunctions: 0
-  MouseInteracted: 0
-  State: 0
 --- !u!114 &17
-MonoBehaviour:
-  m_ObjectHideFlags: 52
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c8bcac0d66f920e49803925a85beb0ed, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_MinSize: {x: 480, y: 270}
-  m_MaxSize: {x: 4000, y: 4000}
-  m_TitleContent:
-    m_Text: Water
-    m_Image: {fileID: -5962505394399907832, guid: 0000000000000000d000000000000000, type: 0}
-    m_Tooltip: 
-  m_Pos:
-    serializedVersion: 2
-    x: 0
-    y: 385
-    width: 1166
-    height: 614
-  m_ViewDataDictionary: {fileID: 0}
-  m_OverlayCanvas:
-    m_LastAppliedPresetName: Default
-    m_SaveData: []
-  m_customGraph: {fileID: 0}
-  m_templatesManager: {fileID: 0}
-  m_innerEditorVariables:
-    m_liveMode: 0
-    m_outlineActiveMode: 0
-    m_nodeParametersMaximized: 1
-    m_nodePaletteMaximized: 0
-    m_expandedRenderingPlatforms: 0
-    m_expandedRenderingOptions: 0
-    m_expandedGeneralShaderOptions: 1
-    m_expandedBlendOptions: 1
-    m_expandedStencilOptions: 1
-    m_expandedVertexOptions: 0
-    m_expandedFunctionInputs: 0
-    m_expandedFunctionSwitches: 0
-    m_expandedFunctionOutputs: 0
-    m_expandedAdditionalIncludes: 0
-    m_expandedAdditionalDefines: 0
-    m_expandedAdditionalDirectives: 0
-    m_expandedCustomTags: 0
-    m_expandedAdditionalSurfaceOptions: 0
-    m_expandedAdditionalPragmas: 0
-    m_expandedDependencies: 0
-    m_expandedBlendModeModule: 0
-    m_expandedDepth: 1
-    m_expandedTesselation: 0
-    m_expandedProperties: 1
-    m_expandedUsePass: 0
-  m_lastpath: Assets/Effects/8_Postprocessing/1_UnderWater/Shaders/Water.shader
-  m_selectionMode: 0
-  m_duplicatePreventionBuffer:
-    m_availableUVChannelsArray: ffffffffffffffffffffffffffffffff
-  m_inactivityTime: 5958.6949955
-  m_lastTimeSaved: 5939.839923
-  m_cacheSaveOp: 0
-  m_mainGraphInstance: {fileID: 0}
-  m_cameraOffset: {x: 4271.521, y: 327.90378}
-  m_cameraZoom: 4.733826
-  m_minNodePos: {x: -2997.522, y: -1032.661}
-  m_maxNodePos: {x: 635.0019, y: 2058.177}
-  m_isDirty: 0
-  m_saveIsDirty: 1
-  m_repaintIsDirty: 0
-  m_liveShaderEditing: 0
-  m_shaderIsModified: 0
-  m_lastOpenedLocation: Assets/Effects/8_Postprocessing/1_UnderWater/Shaders/Water.shader
-  m_zoomChanged: 0
-  m_lastWindowWidth: 1166
-  m_graphCount: 1
-  m_currentInactiveTime: 1.0688404000002265
-  m_currentNodeAvailability: 1
-  m_nodeParametersWindowMaximized: 1
-  m_paletteWindowMaximized: 1
-  m_isShaderFunctionWindow: 0
-  m_openedShaderFunction: {fileID: 0}
-  m_openedAssetFromNode: 0
-  m_messages: []
-  m_maxMsgWidth: 100
-  m_maximizeMessages: 0
-  m_frameCounter: 0
-  m_fpsTime: 0
-  m_fpsDisplay: 
-  CheckFunctions: 0
-  MouseInteracted: 0
-  State: 0
---- !u!114 &18
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1008,9 +902,9 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 998
+    x: 1287
     y: 73
-    width: 204
+    width: 192
     height: 926
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
@@ -1019,20 +913,20 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 
+      m_SelectedIDs: 9a550000
       m_LastClickedID: 0
-      m_ExpandedIDs: 2cf5ffff0afbffffa8540000
+      m_ExpandedIDs: 4af8ffff0afbffff6c540000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: Camera
-        m_OriginalName: Camera
+        m_Name: Water
+        m_OriginalName: Water
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
-        m_UserData: 21660
+        m_UserData: 21754
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
         m_OriginalEventType: 0
@@ -1045,7 +939,7 @@ MonoBehaviour:
       m_IsLocked: 0
     m_CurrentSortingName: TransformSorting
   m_WindowGUID: 1963b4084d1c2da4a8eda837833cd62f
---- !u!114 &19
+--- !u!114 &18
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1065,9 +959,9 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 1204
+    x: 1481
     y: 73
-    width: 293
+    width: 127
     height: 926
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
@@ -1085,7 +979,8 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SkipHidden: 0
     m_SearchArea: 1
-    m_Folders: []
+    m_Folders:
+    - Assets/Effects/8_Postprocessing/1_UnderWater/Materials
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 0
@@ -1100,7 +995,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: ce850000
     m_LastClickedID: 34254
-    m_ExpandedIDs: ffffffff00000000ea570000ec570000ee570000f0570000f2570000f4570000f6570000f8570000fa570000fc570000fe57000000580000025800000458000006580000085800000a5800000c5800000e58000010580000125800001458000016580000185800001a5800001c5800001e58000020580000225800002458000026580000285800002a5800002c5800002e58000030580000325800003458000036580000
+    m_ExpandedIDs: 0000000000580000025800000458000006580000085800000a5800000c5800000e58000010580000125800001458000016580000185800001a5800001c5800001e58000020580000225800002458000026580000285800002a5800002c5800002e58000030580000325800003458000036580000385800003a5800003c5800003e58000040580000425800004458000046580000485800004a580000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1128,7 +1023,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: ffffffff00000000ea570000ec570000ee570000f0570000f2570000f4570000f6570000f8570000fa570000fc570000fe57000000580000025800000458000006580000085800000a5800000c58000010580000125800001458000016580000185800001a5800001c5800001e58000020580000225800002458000026580000285800002a5800002c5800002e580000325800003458000036580000
+    m_ExpandedIDs: ffffffff0000000000580000025800000458000006580000085800000a5800000c5800000e58000010580000125800001458000016580000185800001a5800001c5800001e58000020580000225800002458000026580000285800002a5800002c5800002e58000030580000325800003458000036580000385800003a5800003c5800003e58000040580000425800004458000046580000485800004a580000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1184,7 +1079,7 @@ MonoBehaviour:
     m_GridSize: 64
   m_SkipHiddenPackages: 0
   m_DirectoriesAreaWidth: 50
---- !u!114 &20
+--- !u!114 &19
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1204,9 +1099,9 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 1499
+    x: 1610
     y: 73
-    width: 420
+    width: 309
     height: 926
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
@@ -1215,7 +1110,7 @@ MonoBehaviour:
   m_ObjectsLockedBeforeSerialization: []
   m_InstanceIDsLockedBeforeSerialization: 
   m_PreviewResizer:
-    m_CachedPref: 348
+    m_CachedPref: -348
     m_ControlHash: -371814159
     m_PrefName: Preview_InspectorPreview
   m_LastInspectedObjectInstanceID: -1

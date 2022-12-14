@@ -10,6 +10,7 @@ Shader "Hidden/effectshader"
 		_UnderWaterColorIntensity ("UnderWaterColorIntensity", Range(1, 10)) = 1
 		_HeightOffsetIntensity ("HeightOffsetIntensity", float) = 100
 		_FogIntensity ("FogIntensity", float) = 1
+		_FogPower ("FogPower", float) = 1
 		_DepthIntensity ("DepthIntensity", float) = 1
 		_DepthFogContrast ("DepthFogContrast", float) = 1
 		_DistortIntensity ("DistortIntensity", float) = 1
@@ -64,6 +65,7 @@ Shader "Hidden/effectshader"
 			float _WaterDivisionWidth;
 			float _UnderWaterColorIntensity;
 			float _FogIntensity;
+			float _FogPower;
 			float _DepthIntensity;
 			float _DepthFogContrast;
 			float _DistortIntensity;
@@ -88,7 +90,7 @@ Shader "Hidden/effectshader"
 					float depth = 1 - SAMPLE_DEPTH_TEXTURE(_CameraDepthTexture , i.uv) * _DepthIntensity;
 					//float linearDepth = Linear01Depth(depth);
 					float fog = saturate(pow(depth, _FogIntensity));
-
+					fog = saturate(pow(1 - fog, _FogPower));
 
 					// Distort
 					float2 distort_uv1 = float2(i.uv.x, i.uv.y + _Time.y * 0.012);
@@ -102,7 +104,7 @@ Shader "Hidden/effectshader"
 					float4 col = tex2D(_MainTex, distort_ScreenUV);
 					
 
-					col = lerp(col, _UnderWaterColor * col * _UnderWaterColorIntensity, fog) * _DepthFogContrast;
+					col = lerp(_UnderWaterColor * col * _UnderWaterColorIntensity, col, fog) * _DepthFogContrast;
 					return col;
 				}
 				else 

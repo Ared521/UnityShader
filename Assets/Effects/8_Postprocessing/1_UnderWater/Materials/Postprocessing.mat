@@ -69,11 +69,12 @@ Material:
     - _BumpScale: 1
     - _Cutoff: 0.5
     - _DepthFogContrast: 0.7
-    - _DepthIntensity: 1
+    - _DepthIntensity: 1.2
     - _DetailNormalMapScale: 1
     - _DistortIntensity: 0.02
     - _DstBlend: 0
-    - _FogIntensity: 10
+    - _FogIntensity: 50
+    - _FogPower: 15
     - _GlossMapScale: 1
     - _Glossiness: 0.5
     - _GlossyReflections: 1
@@ -86,7 +87,7 @@ Material:
     - _SpecularHighlights: 1
     - _SrcBlend: 1
     - _UVSec: 0
-    - _UnderWaterColorIntensity: 2.5
+    - _UnderWaterColorIntensity: 1
     - _UnderWaterColorProportion: 0.61
     - _WaterDivisionOffset: -0.27
     - _WaterDivisionWidth: 15
