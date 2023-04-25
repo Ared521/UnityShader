@@ -8,11 +8,11 @@ TagManager:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - GroundCollider
   - Water
   - UI
   - PoseProcess
-  - 
+  - SlotCollider
   - 
   - 
   - 

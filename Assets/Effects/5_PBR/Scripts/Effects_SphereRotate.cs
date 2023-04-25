@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Effects_SphereRotate : MonoBehaviour
 {
-    public int rotateSpeed = 2;
+    public float rotateSpeed = 2;
     void Start()
     {
         

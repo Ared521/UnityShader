@@ -56,14 +56,14 @@ Shader "Effects_Unlit/1_Scan"
                 o.pos_World = mul(unity_ObjectToWorld, v.vertex);
                 o.view_WorldDir = normalize(_WorldSpaceCameraPos.xyz - o.pos_World);
                 o.normal_WorldDir = normalize(UnityObjectToWorldNormal(v.normal));
-                /*Æë´Î×ø±ê¸ÅÄî£¬4Î¬ÏòÁ¿×îºóÒ»Î»£º1±íÊ¾µã£¬0±íÊ¾ÏòÁ¿¡£×¢£ºÏÂÃæ¼ÓµÄflaot4(0,0,0,1),
-                ÆäÖÐµÄ 0 ¸Ä³É±ðµÄÈÎÒâÖµ¶¼¿ÉÒÔ£¬¿ÉÒÔÈÏÎªÊÇÄ£ÐÍÉÏµÄÄ³Ò»µã¡£
-                ÒòÎªÖ»ÊÇ±£Ö¤Ïà¶ÔÓÚÄ³¸öµãµÄ´óÐ¡ÊÇ²»»áËæÎïÌåÎ»ÖÃ±ä»¯¶ø±ä»¯µÄ¡£
-                Ïà¶ÔÄ³¸öµãÎ»ÖÃ²»±äµÄÒâË¼ÊÇ£ºµ±ÎïÌåÔÚÒÆ¶¯»òÐý×ªµÄÊ±ºò£¬Ä£ÐÍÉÏµÄÄ³Ò»µã(Ò²¾ÍÊÇÉÏÃæµÄfloat4(0,0,0,1))Ò²Í¬Ñù×ö M ¾ØÕó±ä»»£¬
-                Á½ÕßÏà¼õµÄ½á¹û¾ÍÊÇ£¬¸ÃÎïÌåÊÇ¾²Ö¹µÄ£¬¼ÆËã³öµÄ UV ²»»áËæÎïÌåµÄÒÆ¶¯¶ø¸Ä±ä¡£*/
+                /*ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½î£¬4Î¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»Î»ï¿½ï¿½1ï¿½ï¿½Ê¾ï¿½ã£¬0ï¿½ï¿½Ê¾ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½×¢ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Óµï¿½flaot4(0,0,0,1),
+                ï¿½ï¿½ï¿½Ðµï¿½ 0 ï¿½Ä³É±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Öµï¿½ï¿½ï¿½ï¿½ï¿½Ô£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Îªï¿½ï¿½Ä£ï¿½ï¿½ï¿½Ïµï¿½Ä³Ò»ï¿½ã¡£
+                ï¿½ï¿½ÎªÖ»ï¿½Ç±ï¿½Ö¤ï¿½ï¿½ï¿½ï¿½ï¿½Ä³ï¿½ï¿½ï¿½ï¿½Ä´ï¿½Ð¡ï¿½Ç²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î»ï¿½Ã±ä»¯ï¿½ï¿½ï¿½ä»¯ï¿½Ä¡ï¿½
+                ï¿½ï¿½ï¿½Ä³ï¿½ï¿½ï¿½ï¿½Î»ï¿½Ã²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ë¼ï¿½Ç£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ¶ï¿½ï¿½ï¿½ï¿½ï¿½×ªï¿½ï¿½Ê±ï¿½ï¿½Ä£ï¿½ï¿½ï¿½Ïµï¿½Ä³Ò»ï¿½ï¿½(Ò²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½float4(0,0,0,1))Ò²Í¬ï¿½ï¿½ï¿½ï¿½ M ï¿½ï¿½ï¿½ï¿½ä»»ï¿½ï¿½
+                ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä½ï¿½ï¿½ï¿½ï¿½ï¿½Ç£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ç¾ï¿½Ö¹ï¿½Ä£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ UV ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ¶ï¿½ï¿½ï¿½ï¿½Ä±ä¡£*/
                 o.pos_ZeroToWorld = mul(unity_ObjectToWorld, float4(0, 0, 0, 1));
                 o.uv = TRANSFORM_TEX(v.texcoord, _MainTex);
-                //É¨¹âÐ§¹û²»ÊÜÎïÌåÎ»ÖÃ±ä»»Ó°Ïì¡£
+                //É¨ï¿½ï¿½Ð§ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î»ï¿½Ã±ä»»Ó°ï¿½ì¡£
                 o.uv_WorldPos = (o.pos_World.xy - o.pos_ZeroToWorld.xy);
                 return o;
             }

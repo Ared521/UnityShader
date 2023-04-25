@@ -1,0 +1,168 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: StylizeWater
+  m_Shader: {fileID: 4800000, guid: a2185862381862041bfefc094e5c3524, type: 3}
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
+  m_LightmapFlags: 0
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _BumpMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailAlbedoMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailMask:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailNormalMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _EmissionMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Envmap:
+        m_Texture: {fileID: 8900000, guid: 10b1860b5fdd083488bb46ecebf97d35, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _FoamNoiseTex1:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _FoamNoiseTex2:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MetallicGlossMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _NormalMap:
+        m_Texture: {fileID: 2800000, guid: 8978cd25b1dfcd747b327f937eba69ee, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _OcclusionMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ParallaxMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ReflectionTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _RefractionNoiseTex:
+        m_Texture: {fileID: 2800000, guid: f6e5be6d65444dd4e91a47db5e80b00d, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _WaterNormalTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _WaterNormalTex2:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _WavesNormal:
+        m_Texture: {fileID: 2800000, guid: 8978cd25b1dfcd747b327f937eba69ee, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _texcoord:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - _BumpScale: 1
+    - _CoastOpacity: 0
+    - _Cutoff: 0.5
+    - _DepthDistance: 0
+    - _DepthRange: 5
+    - _DetailNormalMapScale: 1
+    - _DstBlend: 0
+    - _EnvIntensity: 1.25
+    - _EnvRotate: 0
+    - _FoamContrast: 0
+    - _FoamDensity: 0.5
+    - _FoamDistance: 0
+    - _FoamMaskIntensity: 1
+    - _FoamMaskPower: 0.2
+    - _FresnelMax: 0.5
+    - _FresnelMin: 0.5
+    - _FresnelPower: 8
+    - _Fresnel_FarInter: 1
+    - _Fresnel_NearInter: 0.1
+    - _GlossMapScale: 1
+    - _Glossiness: 0.5
+    - _GlossyReflections: 1
+    - _Metallic: 0
+    - _Mode: 0
+    - _NormalTilling: 8.2
+    - _OcclusionStrength: 1
+    - _Opacity: 0.41
+    - _Parallax: 0.02
+    - _ParallaxIntensity: 0.5
+    - _ReflectDistort: 5
+    - _RefractionIntensity: 1
+    - _RefractionScale: 0.2
+    - _Roughness: 0.5
+    - _ShallowWaterTransparent: 0.559
+    - _Smoothness: 0
+    - _SmoothnessTextureChannel: 0
+    - _SpecularHighlights: 1
+    - _SrcBlend: 1
+    - _UVSec: 0
+    - _UnderWaterDistort: 5.05
+    - _WaterDepth: 0
+    - _WaterDepthPow: 0.3
+    - _WaterFlowSpeed: 0
+    - _WaterFresnelPower: 10
+    - _WaterNormal_Intensity: 1
+    - _WaterTransparentOffset: 3.78
+    - _WaterTransparentPower: 3
+    - _WavesNormalIntensity: 1
+    - _WavesSpeed: 0
+    - _WavesTile: 1
+    - _ZWrite: 1
+    - __dirty: 0
+    m_Colors:
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _Color1: {r: 0.9339623, g: 0.2863564, b: 0.2863564, a: 0}
+    - _Color2: {r: 0, g: 0, b: 0, a: 0}
+    - _DeepWater: {r: 0.02055893, g: 0.33222505, b: 0.6226415, a: 1}
+    - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
+    - _FoamUVOffset: {r: 0.1, g: 0, b: 0, a: 0}
+    - _FresnelColor: {r: 0.2756764, g: 0.71960413, b: 0.990566, a: 1}
+    - _NormalSpeed: {r: 2, g: 2, b: 0, a: 0}
+    - _ShallowWater: {r: 0, g: 1, b: 0.9781742, a: 0}
+    - _UnderWaterColor: {r: 0, g: 0.3679245, b: 0.1007944, a: 0}
+  m_BuildTextureStacks: []

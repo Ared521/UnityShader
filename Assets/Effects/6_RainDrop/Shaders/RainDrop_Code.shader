@@ -47,22 +47,22 @@ Shader "Effects_Unlit/6_RainDrop_Code"
                 float drop_HorizonSize = 2;
                 float2 UV_Center = (i.uv * float2(drop_HorizonSize, 1)) * dropSize;
 
-                // ¸ü¸ÄÓêµÎÏÂÂäËÙ¶È(»ù´¡)
+                // æ›´æ”¹é›¨æ»´ä¸‹è½é€Ÿåº¦(åŸºç¡€)
                 UV_Center.y += time;
 
                 // Random
-                // ×¢£¡£¡£¡ ÓÉÓÚÕâÀïµÄ UV_Center Çó floor£¬ËùÒÔÃ¿¸ö¸ñ×ÓµÄËæ»úÖµ¶¼ÊÇ²»Ò»ÑùµÄ¡£
+                // æ³¨ï¼ï¼ï¼ ç”±äºè¿™é‡Œçš„ UV_Center æ±‚ floorï¼Œæ‰€ä»¥æ¯ä¸ªæ ¼å­çš„éšæœºå€¼éƒ½æ˜¯ä¸ä¸€æ ·çš„ã€‚
                 float random = dot(floor(UV_Center), float2(12.9898,78.233));
 				random = lerp(0.0, 1.0, frac((sin(random) * 43758.55)));
 
-                // ¸ü¸ÄÓêµÎÏÂÂäËÙ¶È(¸½¼Ó)
+                // æ›´æ”¹é›¨æ»´ä¸‹è½é€Ÿåº¦(é™„åŠ )
                 // UV_Center.y += cos(time * random);
 
                 // Y_Wiggle
                 float V_Wiggle = random * 6.15 + time;
                 V_Wiggle = 0.3 * sin(sin(sin(V_Wiggle) * 0.5 + V_Wiggle) + V_Wiggle);
 
-                // »á¸ù¾İË®µÎÊúÖ±¹ì¼£µÄ V£¬Ò²¾ÍÊÇ¸ß¶È£¬Ë®Æ½ËÙ¶È±ä»»¡£
+                // ä¼šæ ¹æ®æ°´æ»´ç«–ç›´è½¨è¿¹çš„ Vï¼Œä¹Ÿå°±æ˜¯é«˜åº¦ï¼Œæ°´å¹³é€Ÿåº¦å˜æ¢ã€‚
                 float U_Wiggle_Speed = i.uv.y * 8;
                 float U_Wiggle = pow(sin(U_Wiggle_Speed), 6) * sin(3 * U_Wiggle_Speed) * 0.25;
                 U_Wiggle += (random - 0.5) * 0.5;
@@ -73,7 +73,7 @@ Shader "Effects_Unlit/6_RainDrop_Code"
                 UV_Center.x -= U_Wiggle;
                 UV_Center.y -= V_Wiggle;
 
-                // TrackDrop Ğ¡ÓêµÎ
+                // TrackDrop å°é›¨æ»´
                 float trackDropCount = 8;
                 float trackDrop_Center_Y = frac((UV_Center.y - time) * trackDropCount) + float2(-0.5, -0.5);
                 trackDrop_Center_Y /= trackDropCount;
@@ -82,10 +82,10 @@ Shader "Effects_Unlit/6_RainDrop_Code"
                 float length_Center_LittleDrop = length(UV_Center_LittleDrop);
                 float trackDrop = smoothstep(0.05, 0.03, length_Center_LittleDrop);
                 
-                // µÚÒ»¸ö Mask ÊÇ£¬´óÓêµÎÏÂÃæ²»ÏÔÊ¾Ğ¡ÓêµÎ¡£
+                // ç¬¬ä¸€ä¸ª Mask æ˜¯ï¼Œå¤§é›¨æ»´ä¸‹é¢ä¸æ˜¾ç¤ºå°é›¨æ»´ã€‚
                 float trackDropMask1 = smoothstep(0, 0.01, UV_Center.y);
-                // µÚ¶ş¸ö Mask ÊÇ£¬Ğ¡ÓêµÎÔ½ÍùÉÏ£¬ÑÕÉ«ÖµÔ½Ç³£¬ÊÓ¾õÉÏÓĞÒ»¸öÍ¸Ã÷¶È±ä»»µÄĞ§¹û£¬ÆäÊµ¸Ä±äµÄ
-                // ÊÇÑÕÉ«Öµ£¬²»ÊÇÍ¸Ã÷¶È¡£
+                // ç¬¬äºŒä¸ª Mask æ˜¯ï¼Œå°é›¨æ»´è¶Šå¾€ä¸Šï¼Œé¢œè‰²å€¼è¶Šæµ…ï¼Œè§†è§‰ä¸Šæœ‰ä¸€ä¸ªé€æ˜åº¦å˜æ¢çš„æ•ˆæœï¼Œå…¶å®æ”¹å˜çš„
+                // æ˜¯é¢œè‰²å€¼ï¼Œä¸æ˜¯é€æ˜åº¦ã€‚
                 float trackDropMask2 = smoothstep(0.7, -0.3, UV_Mask_Y);
                 trackDrop *= trackDropMask1;
                 trackDrop *= trackDropMask2;
@@ -95,7 +95,7 @@ Shader "Effects_Unlit/6_RainDrop_Code"
                 float track_V = smoothstep(-0.02, 0, UV_Center.y);
                 float track = track_U * track_V * trackDropMask2;
 
-                // MainDrop ´óÓêµÎ
+                // MainDrop å¤§é›¨æ»´
                 UV_Center /= float2(drop_HorizonSize, 1);
                 float length_Center = length(UV_Center);
                 float mainDrop = smoothstep(0.1, 0.075, length_Center);

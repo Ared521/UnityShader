@@ -73,14 +73,14 @@ Material:
     - _GlossMapScale: 1
     - _Glossiness: 0.5
     - _GlossyReflections: 1
-    - _IBLDiffuseIntensity: 0.05
-    - _IBLSpecIntensity: 0.1
-    - _Metallic: 1
+    - _IBLDiffuseIntensity: 0
+    - _IBLSpecIntensity: 0.16
+    - _Metallic: 0.43
     - _Mode: 0
-    - _NormalIntensity: 1.5
+    - _NormalIntensity: -5
     - _OcclusionStrength: 1
     - _Parallax: 0.02
-    - _Smoothness: 1.25
+    - _Smoothness: 1.53
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1

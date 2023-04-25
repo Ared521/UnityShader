@@ -11,7 +11,7 @@ Material:
   m_Shader: {fileID: 4800000, guid: 5c303a1ba2a55b94dbc97fb4cb1f6f2b, type: 3}
   m_ValidKeywords: []
   m_InvalidKeywords: []
-  m_LightmapFlags: 0
+  m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
@@ -91,12 +91,13 @@ Material:
     - _SpecularHighlights: 1
     - _SrcBlend: 1
     - _StaticWaterSize: 6
-    - _StaticWaterSize1: 5
+    - _StaticWaterSize1: 0
     - _TrackVisableIntensity: 1
     - _TrackVisableIntensity1: 1
     - _UVSec: 0
     - _WaterVisableIntensity: 2
     - _WaterVisableIntensity1: 5
+    - _Y_Speed: 0
     - _ZWrite: 1
     - __dirty: 0
     m_Colors:

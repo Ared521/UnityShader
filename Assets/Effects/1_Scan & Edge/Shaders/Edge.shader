@@ -59,6 +59,7 @@ Shader "Effects_Unlit/1_Edge"
                 half NdotV = max(0.0, dot(i.view_WorldDir, i.normal_WorldDir));
                 half fresnel = pow((1 - NdotV), _EdgeIntensity);
                 half4 final_Color = half4(baseColor, fresnel);
+                
                 return final_Color;
             }
             ENDCG

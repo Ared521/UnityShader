@@ -111,13 +111,13 @@ Material:
     - _Cutoff: 0.5
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
-    - _Float3: 0.01
+    - _Float3: 8
     - _Float4: 0.79
     - _Float5: 2.2
-    - _FoamMaskIntensity: 2
+    - _FoamMaskIntensity: 5.4
     - _FoamMaskPower: 0.5
-    - _Fresnel_FarInter: 0.7
-    - _Fresnel_NearInter: 0.3
+    - _Fresnel_FarInter: 0.73
+    - _Fresnel_NearInter: 0.41
     - _GlossMapScale: 1
     - _Glossiness: 0.5
     - _GlossyReflections: 1
@@ -127,17 +127,17 @@ Material:
     - _NormalTilling1: 8
     - _OcclusionStrength: 1
     - _Parallax: 0.02
-    - _RefractionIntensity: 0.2
+    - _RefractionIntensity: 1.7
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1
     - _UVSec: 0
-    - _WaterDepth: 1.5
-    - _WaterFlowSpeed: 0.075
+    - _WaterDepth: 3.24
+    - _WaterFlowSpeed: 0.077
     - _WaterFlowSpeed1: 0.25
-    - _WaterFresnelPower: 2.2
+    - _WaterFresnelPower: 1.6
     - _WaterNormalTilling: 5
-    - _WaterNormal_Intensity: 0.12
+    - _WaterNormal_Intensity: 0.27
     - _WaterNormal_Intensity1: 0.4
     - _WaterNormal_Intensity_1: 1.6
     - _WaterOpacity: 1
